@@ -5,6 +5,8 @@
 // Secure Element identity and keys
 #pragma once
 
+#include "config.h"
+
 // ******************************************************************************
 // ********************************** WARNING ***********************************
 // ******************************************************************************
@@ -37,13 +39,13 @@
 
 // When set to 1 DevEui is LORAWAN_DEVICE_EUI
 // When set to 0 DevEui is automatically set with a value provided by MCU platform
-#define STATIC_DEVICE_EUI                                  0
+#define STATIC_DEVICE_EUI                                  1
 
 // end-device IEEE EUI (big endian)
-#define LORAWAN_DEVICE_EUI                                 { 0x00, 0x80, 0xE1, 0x01, 0x01, 0x01, 0x01, 0x01 }
+#define LORAWAN_DEVICE_EUI                                 CONFIG_DEVEUI
 
 // App/Join server IEEE EUI (big endian)
-#define LORAWAN_JOIN_EUI                                   { 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01 }
+#define LORAWAN_JOIN_EUI                                   CONFIG_APPEUI
 
 // When set to 1 DevAddr is LORAWAN_DEVICE_ADDRESS
 // When set to 0 DevAddr is automatically set with a value provided by a pseudo
@@ -54,24 +56,16 @@
 #define LORAWAN_DEVICE_ADDRESS                             ( uint32_t )0x0100000A
 
 // Application root key
-#define LORAWAN_APP_KEY                                    2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
+#define LORAWAN_APP_KEY                                    CONFIG_APPKEY
 
 // Network root key
-#define LORAWAN_NWK_KEY                                    2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
+#define LORAWAN_NWK_KEY                                    CONFIG_APPKEY
 
 // Forwarding Network session key
-#define LORAWAN_NWK_S_KEY                                  2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
+#define LORAWAN_NWK_S_KEY                                  CONFIG_APPKEY
 
 // Application session key
-#define LORAWAN_APP_S_KEY                                  2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C
-
-// Format commissioning keys
-#define RAW_TO_INT8A(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p) {0x##a,0x##b,0x##c,0x##d,\
-                                                        0x##e,0x##f,0x##g,0x##h,\
-                                                        0x##i,0x##j,0x##k,0x##l,\
-                                                        0x##m,0x##n,0x##o,0x##p}
-
-#define FORMAT_KEY(...) RAW_TO_INT8A(__VA_ARGS__)
+#define LORAWAN_APP_S_KEY                                  CONFIG_APPKEY
 
 #if (USE_LRWAN_1_1_X_CRYPTO == 1)
 #define SESSION_KEYS_LIST                                                                                           \
@@ -99,7 +93,7 @@
              * WARNING: NWK_S_KEY FOR 1.0.x DEVICES                                                                 \
              */                                                                                                     \
             .KeyID    = F_NWK_S_INT_KEY,                                                                            \
-            .KeyValue = FORMAT_KEY(LORAWAN_NWK_S_KEY),                                                              \
+            .KeyValue = LORAWAN_NWK_S_KEY,                                                              \
         },                                                                                                          \
         {                                                                                                           \
             /*!                                                                                                     \
@@ -124,7 +118,7 @@
              * Application session key                                                                              \
              */                                                                                                     \
             .KeyID    = APP_S_KEY,                                                                                  \
-            .KeyValue = FORMAT_KEY(LORAWAN_APP_S_KEY),                                                              \
+            .KeyValue = LORAWAN_APP_S_KEY,                                                                          \
         },
 #else // USE_LRWAN_1_1_X_CRYPTO == 0
 #define SESSION_KEYS_LIST                                                                                           \
@@ -133,14 +127,14 @@
              * Network session key                                                                                  \
              */                                                                                                     \
             .KeyID    = NWK_S_KEY,                                                                                  \
-            .KeyValue = FORMAT_KEY(LORAWAN_NWK_S_KEY),                                                              \
+            .KeyValue = LORAWAN_NWK_S_KEY,                                                                          \
         },                                                                                                          \
         {                                                                                                           \
             /*!                                                                                                     \
              * Application session key                                                                              \
              */                                                                                                     \
             .KeyID    = APP_S_KEY,                                                                                  \
-            .KeyValue = FORMAT_KEY(LORAWAN_APP_S_KEY),                                                              \
+            .KeyValue = LORAWAN_APP_S_KEY,                                                                          \
         },
 #endif // USE_LRWAN_1_1_X_CRYPTO 
 
@@ -278,7 +272,7 @@
              * WARNING: FOR 1.0.x DEVICES IT IS THE \ref LORAWAN_GEN_APP_KEY                                        \
              */                                                                                                     \
             .KeyID    = APP_KEY,                                                                                    \
-            .KeyValue = FORMAT_KEY(LORAWAN_APP_KEY),                                                                \
+            .KeyValue = LORAWAN_APP_KEY,                                                                            \
         },                                                                                                          \
         {                                                                                                           \
             /*!                                                                                                     \
@@ -286,7 +280,7 @@
              * WARNING: FOR 1.0.x DEVICES IT IS THE \ref LORAWAN_APP_KEY                                            \
              */                                                                                                     \
             .KeyID    = NWK_KEY,                                                                                    \
-            .KeyValue = FORMAT_KEY(LORAWAN_NWK_KEY),                                                                \
+            .KeyValue = LORAWAN_NWK_KEY,                                                                            \
         },                                                                                                          \
         SESSION_KEYS_LIST                                                                                           \
         {                                                                                                           \

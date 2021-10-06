@@ -4,8 +4,11 @@
 
 #pragma once
 
+// ACTIVE_REGION
+#include "config.h"
+
 // LoraWAN application configuration (Mw is configured by lorawan_conf.h)
-#define ACTIVE_REGION                               LORAMAC_REGION_EU868
+#define ACTIVE_REGION                               CONFIG_ACTIVE_REGION
 
 // Defines the application data transmission duty cycle. 10s, value in [ms].
 #define APP_TX_DUTYCYCLE                            10000
