@@ -20,6 +20,8 @@
 #include "app.h"
 #include "adc_if.h"
 
+// Forwards
+void App_Init(LoRaMacRegion_t selectedRegion);
 static void SendTxData(void);
 static void OnTxTimerEvent(void *context);
 static void OnJoinRequest(LmHandlerJoinParams_t *joinParams);
@@ -47,7 +49,7 @@ static LmHandlerCallbacks_t LmHandlerCallbacks = {
 
 // LoRaWAN handler parameters
 static LmHandlerParams_t LmHandlerParams = {
-    .ActiveRegion =             ACTIVE_REGION,
+    .ActiveRegion =             LORAMAC_REGION_US915,
     .DefaultClass =             LORAWAN_DEFAULT_CLASS,
     .AdrEnable =                LORAWAN_ADR_STATE,
     .TxDatarate =               LORAWAN_DEFAULT_DATA_RATE,
@@ -73,7 +75,7 @@ static UTIL_TIMER_Object_t RxLedTimer;
 static UTIL_TIMER_Object_t JoinLedTimer;
 
 // Init lorawan
-void App_Init(void)
+void App_Init(LoRaMacRegion_t selectedRegion)
 {
 
     // Get LoRa APP version
@@ -108,6 +110,7 @@ void App_Init(void)
     LoraInfo_Init();
 
     // Init the Lora Stack
+    LmHandlerParams.ActiveRegion = selectedRegion;
     LmHandlerInit(&LmHandlerCallbacks);
     LmHandlerConfigure(&LmHandlerParams);
 
@@ -267,7 +270,7 @@ static void OnJoinTimerLedEvent(void *context)
 static void OnTxData(LmHandlerTxParams_t *params)
 {
     if ((params != NULL)) {
-        // Process Tx event only if its a mcps response to prevent some internal events (mlme) 
+        // Process Tx event only if its a mcps response to prevent some internal events (mlme)
         if (params->IsMcpsConfirm != 0) {
             ledIndicateTransmitInProgress(true);
             UTIL_TIMER_Start(&TxLedTimer);

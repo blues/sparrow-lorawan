@@ -3,6 +3,7 @@
 // copyright holder including that found in the LICENSE file.
 
 #include "app.h"
+#include "Region.h"
 #include "sys_app.h"
 #include "stm32_seq.h"
 
@@ -10,7 +11,11 @@
 bool buttonHeldAtBoot = false;
 uint32_t radioBand = 0;
 
+// Region
+LoRaMacRegion_t RegionSwitchSelection = LORAMAC_REGION_US915;
+
 // Forwards
+extern void App_Init(LoRaMacRegion_t selectedRegion);
 void ioInit(void);
 int tristate(uint16_t pin, GPIO_TypeDef *port);
 
@@ -20,10 +25,10 @@ void MX_AppMain(void)
 
     // Initialize GPIOs
     ioInit();
-    
+
     // Initialize peripherals
     SystemApp_Init();
-    App_Init();
+    App_Init(RegionSwitchSelection);
 
     // Loop, processing LoRaWAN stats
     while (1) {
@@ -90,7 +95,7 @@ void ioInit(void)
     HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
     int gpio0 = tristate(RFSEL_0_Pin, RFSEL_0_GPIO_Port);
     int gpio1 = tristate(RFSEL_1_Pin, RFSEL_1_GPIO_Port);
-    int value;
+    int value = 0;
     if (gpio0 == TRISTATE_FLOAT && gpio1 == TRISTATE_FLOAT) {
         value = 0;
     } else if (gpio0 == TRISTATE_HIGH && gpio1 == TRISTATE_FLOAT) {
@@ -124,40 +129,39 @@ void ioInit(void)
     } else if (gpio0 == TRISTATE_HIGH && gpio1 == TRISTATE_HIGH) {
         value = 4;
     }
-    uint32_t freq = 915000000;
     switch (value) {
     default:
     case 0:
-        freq = 915000000;  // OFF OFF OFF OFF (US915 & AU915)
+        RegionSwitchSelection = LORAMAC_REGION_US915;   // OFF OFF OFF OFF (US915)
+//        RegionSwitchSelection = LORAMAC_REGION_AU915;   // OFF OFF OFF OFF (AU915)
         break;
     case 1:
-        freq = 923000000;  //  ON OFF OFF OFF (AS923)
+        RegionSwitchSelection = LORAMAC_REGION_AS923;   //  ON OFF OFF OFF (AS923)
         break;
     case 2:
-        freq = 920000000;  // OFF  ON OFF OFF (KR920)
+        RegionSwitchSelection = LORAMAC_REGION_KR920;   // OFF  ON OFF OFF (KR920)
         break;
     case 3:
-        freq = 865000000;  // OFF OFF  ON OFF (IN865)
+        RegionSwitchSelection = LORAMAC_REGION_IN865;   // OFF OFF  ON OFF (IN865)
         break;
     case 4:
-        freq = 868000000;  //  ON OFF  ON OFF (EU868)
+        RegionSwitchSelection = LORAMAC_REGION_EU868;   //  ON OFF  ON OFF (EU868)
         break;
     case 5:
-        freq = 864000000;  // OFF  ON  ON OFF (RU864)
+        RegionSwitchSelection = LORAMAC_REGION_RU864;   // OFF  ON  ON OFF (RU864)
         break;
     case 6:
-        freq = 779000000;  // OFF OFF OFF  ON (CN779)
+        RegionSwitchSelection = LORAMAC_REGION_CN779;   // OFF OFF OFF  ON (CN779)
         break;
     case 7:
-        freq = 470000000;  //  ON OFF OFF  ON (CN470)
+        RegionSwitchSelection = LORAMAC_REGION_CN470;   //  ON OFF OFF  ON (CN470)
         break;
     case 8:
-        freq = 433000000;  // OFF  ON OFF  ON (EU433)
+        RegionSwitchSelection = LORAMAC_REGION_EU433;   // OFF  ON OFF  ON (EU433)
         break;
     }
-    radioBand = freq;
 #else
-    radioBand = 915000000;       // When using NUCLEO, use US region
+    RegionSwitchSelection = LORAMAC_REGION_US915;       // When using NUCLEO, use US region
 #endif
 
     // Init LEDs

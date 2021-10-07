@@ -240,13 +240,13 @@ void MX_UART_TxCpltCallback(UART_HandleTypeDef *huart, void (*cb)(void *))
 {
     if (huart == &huart1) {
         TxCpltCallback_USART1 = cb;
-    } 
+    }
     if (huart == &huart2) {
         TxCpltCallback_USART2 = cb;
-    } 
+    }
     if (huart == &hlpuart1) {
         TxCpltCallback_LPUART1 = cb;
-    } 
+    }
 }
 
 // Transmit complete callback for serial ports
@@ -254,13 +254,13 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
     if (huart == &huart1 && TxCpltCallback_USART1 != NULL) {
         TxCpltCallback_USART1(huart);
-    } 
+    }
     if (huart == &huart2 && TxCpltCallback_USART2 != NULL) {
         TxCpltCallback_USART2(huart);
-    } 
+    }
     if (huart == &hlpuart1 && TxCpltCallback_LPUART1 != NULL) {
         TxCpltCallback_LPUART1(huart);
-    } 
+    }
 }
 
 // Receive from a register, and return true for success or false for failure

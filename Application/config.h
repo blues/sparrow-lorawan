@@ -4,9 +4,6 @@
 
 #pragma once
 
-// LoraWAN application configuration (Mw is configured by lorawan_conf.h)
-#define CONFIG_ACTIVE_REGION    LORAMAC_REGION_US915
-
 // From LoRaWAN Network Management Console
 #define CONFIG_DEVEUI           { 0x60, 0x81, 0xF9, 0x4B, 0x02, 0x96, 0x4E, 0x2A }
 #define CONFIG_APPEUI           { 0x60, 0x81, 0xF9, 0x5C, 0x7B, 0x60, 0xB0, 0x93  }

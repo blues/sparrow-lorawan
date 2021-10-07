@@ -7,9 +7,6 @@
 #include "main.h"
 #include "config_sys.h"
 
-// app.c
-void App_Init(void);
-
 // led.c
 void ledJoined(void);
 void ledIndicateJoinInProgress(bool on);

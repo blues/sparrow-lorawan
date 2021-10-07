@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.50.9.278/W32 for ARM                  07/Oct/2021  14:21:49
+# IAR ELF Linker V8.50.9.278/W32 for ARM                  07/Oct/2021  15:57:20
 # Copyright 2007-2020 IAR Systems AB.
 #
 #    Output file  =
@@ -8,7 +8,7 @@
 #    Map file     =
 #        C:\Users\ray\dev\sparrow-lorawan\Application\EWARM\sparrow\List\sparrow.map
 #    Command line =
-#        -f C:\Users\ray\AppData\Local\Temp\EW2C42.tmp
+#        -f C:\Users\ray\AppData\Local\Temp\EW9934.tmp
 #        (C:\Users\ray\dev\sparrow-lorawan\Application\EWARM\sparrow\Obj\adc.o
 #        C:\Users\ray\dev\sparrow-lorawan\Application\EWARM\sparrow\Obj\adc_if.o
 #        C:\Users\ray\dev\sparrow-lorawan\Application\EWARM\sparrow\Obj\app.o
@@ -146,7 +146,7 @@ initialize by copy { rw };
   .intvec            ro code   0x800'0000     0x138  startup_stm32wl55xx_cm4.o [1]
                              - 0x800'0138     0x138
 
-"P1":                                      0x1'6185
+"P1":                                      0x1'617a
   .text              ro code   0x800'0138    0x3780  LoRaMac.o [1]
   .text              ro code   0x800'38b8     0x264  stm32_timer.o [1]
   .text              ro code   0x800'3b1c     0x1d4  stm32_systime.o [1]
@@ -235,99 +235,102 @@ initialize by copy { rw };
   .text              ro code   0x801'2296       0x2  stm32wlxx_hal_uart.o [1]
   .text              ro code   0x801'2298    0x107a  stm32wlxx_hal_uart.o [1]
   .text              ro code   0x801'3312       0x2  stm32wlxx_hal_uart.o [1]
-  .text              ro code   0x801'3314     0x378  appinit.o [1]
-  .text              ro code   0x801'368c      0x54  stm32wlxx_hal_pwr.o [1]
-  .text              ro code   0x801'36e0      0x94  stm32wlxx_hal_pwr_ex.o [1]
-  .text              ro code   0x801'3774     0x1b0  stm32wlxx_hal_rcc_ex.o [1]
-  .text              ro code   0x801'3924       0x2  stm32wlxx_hal_rtc_ex.o [1]
-  .text              ro code   0x801'3926       0x2  stm32wlxx_hal_uart_ex.o [1]
-  .text              ro code   0x801'3928     0x3c8  main.o [1]
-  .text              ro code   0x801'3cf0       0x2  stm32wlxx_hal_i2c.o [1]
-  .text              ro code   0x801'3cf2       0x2  stm32wlxx_hal_i2c.o [1]
-  .text              ro code   0x801'3cf4       0x2  stm32wlxx_hal_i2c.o [1]
-  .text              ro code   0x801'3cf6       0x2  stm32wlxx_hal_i2c.o [1]
-  .text              ro code   0x801'3cf8       0x2  stm32wlxx_hal_i2c.o [1]
-  .text              ro code   0x801'3cfa       0x2  stm32wlxx_hal_i2c.o [1]
-  .text              ro code   0x801'3cfc       0x2  stm32wlxx_hal_spi.o [1]
-  .text              ro code   0x801'3cfe       0x2  stm32wlxx_hal_uart_ex.o [1]
-  .text              ro code   0x801'3d00     0x52c  app.o [1]
-  .text              ro code   0x801'422c     0x150  stm32_seq.o [1]
-  .text              ro code   0x801'437c      0xfa  stm32wlxx_hal_uart_ex.o [1]
-  .text              ro code   0x801'4478      0x78  lora_info.o [1]
-  .text              ro code   0x801'44f0     0x9c4  LmHandler.o [1]
-  .text              ro code   0x801'4eb4      0x74  led.o [1]
-  .text              ro code   0x801'4f28      0xd8  FltMul.o [3]
-  .text              ro code   0x801'5000      0xfc  FltDiv.o [3]
-  .text              ro code   0x801'50fc      0x2a  FltToS32.o [3]
-  .text              ro code   0x801'5126       0x2  stm32_seq.o [1]
-  .text              ro code   0x801'5128       0x2  stm32_seq.o [1]
-  .text              ro code   0x801'512a       0xa  NvmDataMgmt.o [1]
-  .text              ro code   0x801'5134     0x2f4  LmhpCompliance.o [1]
-  .rodata            const     0x801'5428     0x200  lorawan_aes.o [1]
-  .rodata            const     0x801'5628     0x100  lorawan_aes.o [1]
-  .rodata            const     0x801'5728      0xc0  soft-se.o [1]
-  .rodata            const     0x801'57e8      0xb0  radio_driver.o [1]
-  .rodata            const     0x801'5898      0x90  RegionEU868.o [1]
-  .rodata            const     0x801'5928      0x84  radio.o [1]
-  .rodata            const     0x801'59ac      0x80  system_stm32wlxx.o [1]
-  .rodata            const     0x801'5a2c      0x54  soft-se.o [1]
-  .rodata            const     0x801'5a80      0x50  stm32_tiny_vsnprintf.o [1]
-  .rodata            const     0x801'5ad0      0x4c  LmHandler.o [1]
-  .text              ro code   0x801'5b1c      0x4a  stm32_lpm_if.o [1]
-  .text              ro code   0x801'5b68      0x10  stm32wlxx_hal.o [1]
-  .text              ro code   0x801'5b78      0x10  stm32wlxx_hal.o [1]
-  .rodata            const     0x801'5b88      0x48  app.o [1]
-  .rodata            const     0x801'5bd0      0x40  RegionAU915.o [1]
-  .rodata            const     0x801'5c10      0x40  RegionUS915.o [1]
-  .text              ro code   0x801'5c50      0x40  usart_if.o [1]
-  .rodata            const     0x801'5c90      0x3c  LmHandler.o [1]
-  .rodata            const     0x801'5ccc      0x3c  LmHandler.o [1]
-  .text              ro code   0x801'5d08      0x38  packbits_init_single.o [4]
-  .rodata            const     0x801'5d40      0x34  app.o [1]
-  .rodata            const     0x801'5d74      0x34  app.o [1]
-  .rodata            const     0x801'5da8      0x34  app.o [1]
-  .rodata            const     0x801'5ddc      0x2c  RegionAU915.o [1]
-  .rodata            const     0x801'5e08      0x2c  timer_if.o [1]
-  .rodata            const     0x801'5e34      0x28  LmHandler.o [1]
-  .text              ro code   0x801'5e5c      0x28  data_init.o [4]
-  .iar.init_table    const     0x801'5e84      0x20  - Linker created -
-  .rodata            const     0x801'5ea4      0x20  app.o [1]
-  .rodata            const     0x801'5ec4      0x20  app.o [1]
-  .rodata            const     0x801'5ee4      0x20  app.o [1]
-  .rodata            const     0x801'5f04      0x20  app.o [1]
-  .rodata            const     0x801'5f24      0x20  app.o [1]
-  .rodata            const     0x801'5f44      0x20  app.o [1]
-  .rodata            const     0x801'5f64      0x20  system_stm32wlxx.o [1]
-  .text              ro code   0x801'5f84      0x1e  cmain.o [4]
-  .text              ro code   0x801'5fa2       0x4  low_level_init.o [2]
-  .text              ro code   0x801'5fa6       0x4  exit.o [2]
-  .text              ro code   0x801'5fac       0xa  cexit.o [4]
-  .text              ro code   0x801'5fb8      0x14  exit.o [5]
-  .rodata            const     0x801'5fcc      0x1c  app.o [1]
-  .rodata            const     0x801'5fe8      0x1c  LmHandler.o [1]
-  .text              ro code   0x801'6004      0x1c  cstartup_M.o [4]
-  .rodata            const     0x801'6020      0x18  app.o [1]
-  .rodata            const     0x801'6038      0x18  app.o [1]
-  .rodata            const     0x801'6050      0x18  stm32_lpm_if.o [1]
-  .rodata            const     0x801'6068      0x14  app.o [1]
-  .rodata            const     0x801'607c      0x14  timer_if.o [1]
-  .rodata            const     0x801'6090      0x10  app.o [1]
-  .rodata            const     0x801'60a0      0x10  app.o [1]
-  .rodata            const     0x801'60b0      0x10  app.o [1]
-  .rodata            const     0x801'60c0      0x10  LoRaMac.o [1]
-  .rodata            const     0x801'60d0      0x10  LoRaMac.o [1]
-  .rodata            const     0x801'60e0      0x10  LoRaMac.o [1]
-  .rodata            const     0x801'60f0      0x10  LoRaMac.o [1]
-  .rodata            const     0x801'6100      0x10  LoRaMac.o [1]
-  .rodata            const     0x801'6110      0x10  usart_if.o [1]
-  .text              ro code   0x801'6120      0x10  startup_stm32wl55xx_cm4.o [1]
+  .text              ro code   0x801'3314     0x368  appinit.o [1]
+  .text              ro code   0x801'367c      0x54  stm32wlxx_hal_pwr.o [1]
+  .text              ro code   0x801'36d0      0x94  stm32wlxx_hal_pwr_ex.o [1]
+  .text              ro code   0x801'3764     0x1b0  stm32wlxx_hal_rcc_ex.o [1]
+  .text              ro code   0x801'3914       0x2  stm32wlxx_hal_rtc_ex.o [1]
+  .text              ro code   0x801'3916       0x2  stm32wlxx_hal_uart_ex.o [1]
+  .text              ro code   0x801'3918     0x3c8  main.o [1]
+  .text              ro code   0x801'3ce0       0x2  stm32wlxx_hal_i2c.o [1]
+  .text              ro code   0x801'3ce2       0x2  stm32wlxx_hal_i2c.o [1]
+  .text              ro code   0x801'3ce4       0x2  stm32wlxx_hal_i2c.o [1]
+  .text              ro code   0x801'3ce6       0x2  stm32wlxx_hal_i2c.o [1]
+  .text              ro code   0x801'3ce8       0x2  stm32wlxx_hal_i2c.o [1]
+  .text              ro code   0x801'3cea       0x2  stm32wlxx_hal_i2c.o [1]
+  .text              ro code   0x801'3cec       0x2  stm32wlxx_hal_spi.o [1]
+  .text              ro code   0x801'3cee       0x2  stm32wlxx_hal_uart_ex.o [1]
+  .text              ro code   0x801'3cf0     0x530  app.o [1]
+  .text              ro code   0x801'4220     0x150  stm32_seq.o [1]
+  .text              ro code   0x801'4370      0xfa  stm32wlxx_hal_uart_ex.o [1]
+  .text              ro code   0x801'446c      0x78  lora_info.o [1]
+  .text              ro code   0x801'44e4     0x9c4  LmHandler.o [1]
+  .text              ro code   0x801'4ea8      0x74  led.o [1]
+  .text              ro code   0x801'4f1c      0xd8  FltMul.o [3]
+  .text              ro code   0x801'4ff4      0xfc  FltDiv.o [3]
+  .text              ro code   0x801'50f0      0x2a  FltToS32.o [3]
+  .text              ro code   0x801'511a       0x2  stm32_seq.o [1]
+  .text              ro code   0x801'511c       0x2  stm32_seq.o [1]
+  .text              ro code   0x801'511e       0xa  NvmDataMgmt.o [1]
+  .text              ro code   0x801'5128     0x2f4  LmhpCompliance.o [1]
+  .rodata            const     0x801'541c     0x200  lorawan_aes.o [1]
+  .rodata            const     0x801'561c     0x100  lorawan_aes.o [1]
+  .rodata            const     0x801'571c      0xc0  soft-se.o [1]
+  .rodata            const     0x801'57dc      0xb0  radio_driver.o [1]
+  .rodata            const     0x801'588c      0x90  RegionEU868.o [1]
+  .rodata            const     0x801'591c      0x84  radio.o [1]
+  .rodata            const     0x801'59a0      0x80  system_stm32wlxx.o [1]
+  .rodata            const     0x801'5a20      0x54  soft-se.o [1]
+  .rodata            const     0x801'5a74      0x50  stm32_tiny_vsnprintf.o [1]
+  .rodata            const     0x801'5ac4      0x4c  LmHandler.o [1]
+  .text              ro code   0x801'5b10      0x4a  stm32_lpm_if.o [1]
+  .text              ro code   0x801'5b5c      0x10  stm32wlxx_hal.o [1]
+  .text              ro code   0x801'5b6c      0x10  stm32wlxx_hal.o [1]
+  .rodata            const     0x801'5b7c      0x48  app.o [1]
+  .rodata            const     0x801'5bc4      0x40  RegionAU915.o [1]
+  .rodata            const     0x801'5c04      0x40  RegionUS915.o [1]
+  .text              ro code   0x801'5c44      0x40  usart_if.o [1]
+  .rodata            const     0x801'5c84      0x3c  LmHandler.o [1]
+  .rodata            const     0x801'5cc0      0x3c  LmHandler.o [1]
+  .text              ro code   0x801'5cfc      0x38  packbits_init_single.o [4]
+  .rodata            const     0x801'5d34      0x34  app.o [1]
+  .rodata            const     0x801'5d68      0x34  app.o [1]
+  .rodata            const     0x801'5d9c      0x34  app.o [1]
+  .rodata            const     0x801'5dd0      0x2c  RegionAU915.o [1]
+  .rodata            const     0x801'5dfc      0x2c  timer_if.o [1]
+  .rodata            const     0x801'5e28      0x28  LmHandler.o [1]
+  .text              ro code   0x801'5e50      0x28  data_init.o [4]
+  .iar.init_table    const     0x801'5e78      0x20  - Linker created -
+  .rodata            const     0x801'5e98      0x20  app.o [1]
+  .rodata            const     0x801'5eb8      0x20  app.o [1]
+  .rodata            const     0x801'5ed8      0x20  app.o [1]
+  .rodata            const     0x801'5ef8      0x20  app.o [1]
+  .rodata            const     0x801'5f18      0x20  app.o [1]
+  .rodata            const     0x801'5f38      0x20  app.o [1]
+  .rodata            const     0x801'5f58      0x20  system_stm32wlxx.o [1]
+  .text              ro code   0x801'5f78      0x1e  cmain.o [4]
+  .text              ro code   0x801'5f96       0x4  low_level_init.o [2]
+  .text              ro code   0x801'5f9a       0x4  exit.o [2]
+  .text              ro code   0x801'5fa0       0xa  cexit.o [4]
+  .text              ro code   0x801'5fac      0x14  exit.o [5]
+  .rodata            const     0x801'5fc0      0x1c  app.o [1]
+  .rodata            const     0x801'5fdc      0x1c  LmHandler.o [1]
+  .text              ro code   0x801'5ff8      0x1c  cstartup_M.o [4]
+  .rodata            const     0x801'6014      0x18  app.o [1]
+  .rodata            const     0x801'602c      0x18  app.o [1]
+  .rodata            const     0x801'6044      0x18  stm32_lpm_if.o [1]
+  .rodata            const     0x801'605c      0x14  app.o [1]
+  .rodata            const     0x801'6070      0x14  timer_if.o [1]
+  .rodata            const     0x801'6084      0x10  app.o [1]
+  .rodata            const     0x801'6094      0x10  app.o [1]
+  .rodata            const     0x801'60a4      0x10  app.o [1]
+  .rodata            const     0x801'60b4      0x10  LoRaMac.o [1]
+  .rodata            const     0x801'60c4      0x10  LoRaMac.o [1]
+  .rodata            const     0x801'60d4      0x10  LoRaMac.o [1]
+  .rodata            const     0x801'60e4      0x10  LoRaMac.o [1]
+  .rodata            const     0x801'60f4      0x10  LoRaMac.o [1]
+  .rodata            const     0x801'6104      0x10  usart_if.o [1]
+  .text              ro code   0x801'6114      0x10  startup_stm32wl55xx_cm4.o [1]
+  .rodata            const     0x801'6124       0xc  app.o [1]
   .rodata            const     0x801'6130       0xc  app.o [1]
-  .rodata            const     0x801'613c       0xc  app.o [1]
-  .rodata            const     0x801'6148       0x8  app.o [1]
-  .rodata            const     0x801'6150       0x8  LmHandler.o [1]
-  .rodata            const     0x801'6158       0x8  LmHandler.o [1]
-  .rodata            const     0x801'6160       0x8  RegionCommon.o [1]
-  .rodata            const     0x801'6168       0x8  RegionCommon.o [1]
+  .rodata            const     0x801'613c       0x8  app.o [1]
+  .rodata            const     0x801'6144       0x8  LmHandler.o [1]
+  .rodata            const     0x801'614c       0x8  LmHandler.o [1]
+  .rodata            const     0x801'6154       0x8  RegionCommon.o [1]
+  .rodata            const     0x801'615c       0x8  RegionCommon.o [1]
+  .text              ro code   0x801'6164       0x4  startup_stm32wl55xx_cm4.o [1]
+  .text              ro code   0x801'6168       0x4  startup_stm32wl55xx_cm4.o [1]
+  .text              ro code   0x801'616c       0x4  startup_stm32wl55xx_cm4.o [1]
   .text              ro code   0x801'6170       0x4  startup_stm32wl55xx_cm4.o [1]
   .text              ro code   0x801'6174       0x4  startup_stm32wl55xx_cm4.o [1]
   .text              ro code   0x801'6178       0x4  startup_stm32wl55xx_cm4.o [1]
@@ -364,17 +367,14 @@ initialize by copy { rw };
   .text              ro code   0x801'61f4       0x4  startup_stm32wl55xx_cm4.o [1]
   .text              ro code   0x801'61f8       0x4  startup_stm32wl55xx_cm4.o [1]
   .text              ro code   0x801'61fc       0x4  startup_stm32wl55xx_cm4.o [1]
-  .text              ro code   0x801'6200       0x4  startup_stm32wl55xx_cm4.o [1]
-  .text              ro code   0x801'6204       0x4  startup_stm32wl55xx_cm4.o [1]
-  .text              ro code   0x801'6208       0x4  startup_stm32wl55xx_cm4.o [1]
-  .text              ro code   0x801'620c       0x2  system_stm32wlxx.o [1]
-  .rodata            const     0x801'620e       0x0  zero_init3.o [4]
-  .rodata            const     0x801'620e       0x0  packbits_init_single.o [4]
-  Initializer bytes  const     0x801'620e      0xaf  <for P2-1>
-                             - 0x801'62bd  0x1'6185
+  .text              ro code   0x801'6200       0x2  system_stm32wlxx.o [1]
+  .rodata            const     0x801'6202       0x0  zero_init3.o [4]
+  .rodata            const     0x801'6202       0x0  packbits_init_single.o [4]
+  Initializer bytes  const     0x801'6202      0xb0  <for P2-1>
+                             - 0x801'62b2  0x1'617a
 
-"P2", part 1 of 3:                            0x14e
-  P2-1                        0x2000'0000     0x14e  <Init block>
+"P2", part 1 of 3:                            0x14f
+  P2-1                        0x2000'0000     0x14f  <Init block>
     .data            inited   0x2000'0000      0x34  app.o [1]
     .data            inited   0x2000'0034      0x10  app.o [1]
     .data            inited   0x2000'0044       0x8  app.o [1]
@@ -391,10 +391,11 @@ initialize by copy { rw };
     .data            inited   0x2000'0144       0x4  system_stm32wlxx.o [1]
     .data            inited   0x2000'0148       0x4  utilities.o [1]
     .data            inited   0x2000'014c       0x1  app.o [1]
-    .data            inited   0x2000'014d       0x1  radio.o [1]
-                            - 0x2000'014e     0x14e
+    .data            inited   0x2000'014d       0x1  appinit.o [1]
+    .data            inited   0x2000'014e       0x1  radio.o [1]
+                            - 0x2000'014f     0x14f
 
-"P2", part 2 of 3:                           0x22e4
+"P2", part 2 of 3:                           0x22e0
   .bss               zero     0x2000'0150     0x730  LoRaMac.o [1]
   .bss               zero     0x2000'0880     0x508  LoRaMac.o [1]
   .bss               zero     0x2000'0d88     0x400  stm32_adv_trace.o [1]
@@ -447,40 +448,38 @@ initialize by copy { rw };
   .bss               zero     0x2000'23dc       0x8  RegionRU864.o [1]
   .bss               zero     0x2000'23e4       0x8  RegionUS915.o [1]
   .bss               zero     0x2000'23ec       0x8  stm32_lpm.o [1]
-  .bss               zero     0x2000'23f4       0x4  appinit.o [1]
+  .bss               zero     0x2000'23f4       0x4  debug.o [1]
   .bss               zero     0x2000'23f8       0x4  debug.o [1]
   .bss               zero     0x2000'23fc       0x4  debug.o [1]
-  .bss               zero     0x2000'2400       0x4  debug.o [1]
-  .bss               zero     0x2000'2404       0x4  LmHandler.o [1]
+  .bss               zero     0x2000'2400       0x4  LmHandler.o [1]
+  .bss               zero     0x2000'2404       0x4  LoRaMac.o [1]
   .bss               zero     0x2000'2408       0x4  LoRaMac.o [1]
-  .bss               zero     0x2000'240c       0x4  LoRaMac.o [1]
-  .bss               zero     0x2000'2410       0x4  LoRaMacCrypto.o [1]
+  .bss               zero     0x2000'240c       0x4  LoRaMacCrypto.o [1]
+  .bss               zero     0x2000'2410       0x4  main.o [1]
   .bss               zero     0x2000'2414       0x4  main.o [1]
   .bss               zero     0x2000'2418       0x4  main.o [1]
   .bss               zero     0x2000'241c       0x4  main.o [1]
-  .bss               zero     0x2000'2420       0x4  main.o [1]
-  .bss               zero     0x2000'2424       0x4  soft-se.o [1]
-  .bss               zero     0x2000'2428       0x4  stm32_timer.o [1]
-  .bss               zero     0x2000'242c       0x4  timer_if.o [1]
-  .bss               zero     0x2000'2430       0x1  appinit.o [1]
-  .bss               zero     0x2000'2431       0x1  debug.o [1]
-  .bss               zero     0x2000'2432       0x1  LmHandler.o [1]
-  .bss               zero     0x2000'2433       0x1  timer_if.o [1]
-                            - 0x2000'2434    0x22e4
+  .bss               zero     0x2000'2420       0x4  soft-se.o [1]
+  .bss               zero     0x2000'2424       0x4  stm32_timer.o [1]
+  .bss               zero     0x2000'2428       0x4  timer_if.o [1]
+  .bss               zero     0x2000'242c       0x1  appinit.o [1]
+  .bss               zero     0x2000'242d       0x1  debug.o [1]
+  .bss               zero     0x2000'242e       0x1  LmHandler.o [1]
+  .bss               zero     0x2000'242f       0x1  timer_if.o [1]
+                            - 0x2000'2430    0x22e0
 
 "P2", part 3 of 3:                            0x800
-  CSTACK                      0x2000'2438     0x800  <Block>
-    CSTACK           uninit   0x2000'2438     0x800  <Block tail>
-                            - 0x2000'2c38     0x800
+  CSTACK                      0x2000'2430     0x800  <Block>
+    CSTACK           uninit   0x2000'2430     0x800  <Block tail>
+                            - 0x2000'2c30     0x800
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-   0x801'62bd   0x803'ffff  0x2'9d43
-  0x2000'014e  0x2000'014f       0x2
-  0x2000'2434  0x2000'2437       0x4
-  0x2000'2c38  0x2000'7fff    0x53c8
+   0x801'62b2   0x803'ffff  0x2'9d4e
+  0x2000'014f  0x2000'014f       0x1
+  0x2000'2c30  0x2000'7fff    0x53d0
 
 
 *******************************************************************************
@@ -490,14 +489,14 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x22e4:
-          0x2000'0150  0x22e4
+    1 destination range, total size 0x22e0:
+          0x2000'0150  0x22e0
 
 Copy/packbits (__iar_packbits_init_single3)
-    1 source range, total size 0xaf (52% of destination):
-           0x801'620e    0xaf
-    1 destination range, total size 0x14e:
-          0x2000'0000   0x14e
+    1 source range, total size 0xb0 (52% of destination):
+           0x801'6202    0xb0
+    1 destination range, total size 0x14f:
+          0x2000'0000   0x14f
 
 
 
@@ -512,8 +511,8 @@ command line/config:
     Total:
 
 C:\Users\ray\dev\sparrow-lorawan\Application\EWARM\sparrow\Obj: [1]
-    LmHandler.o                  2'500      313      409
-    LmhpCompliance.o               756       53      100
+    LmHandler.o                  2'500      314      409
+    LmhpCompliance.o               756       52      100
     LoRaMac.o                   14'208       80    3'152
     LoRaMacAdr.o                   200
     LoRaMacClassB.o                 78
@@ -537,8 +536,8 @@ C:\Users\ray\dev\sparrow-lorawan\Application\EWARM\sparrow\Obj: [1]
     RegionUS915.o                2'764       64        8
     adc.o                          192               100
     adc_if.o                       348
-    app.o                        1'324      655      441
-    appinit.o                      888                 5
+    app.o                        1'328      654      441
+    appinit.o                      872        1        2
     cmac.o                         506
     debug.o                        472               513
     led.o                          116
@@ -560,7 +559,7 @@ C:\Users\ray\dev\sparrow-lorawan\Application\EWARM\sparrow\Obj: [1]
     stm32_systime.o                468
     stm32_timer.o                  612                 4
     stm32_tiny_vsnprintf.o         596       80
-    stm32wlxx_hal.o                184        6       12
+    stm32wlxx_hal.o                184        7       12
     stm32wlxx_hal_adc.o          2'004
     stm32wlxx_hal_adc_ex.o         156
     stm32wlxx_hal_cortex.o         156
@@ -588,7 +587,7 @@ C:\Users\ray\dev\sparrow-lorawan\Application\EWARM\sparrow\Obj: [1]
     util_if.o                      124
     utilities.o                    192        2        4
     ----------------------------------------------------
-    Total:                      85'325    3'173    9'134
+    Total:                      85'313    3'174    9'131
 
 dl7M_tlf.a: [2]
     exit.o                           4
@@ -635,7 +634,7 @@ shb_l.a: [5]
     Gaps                             9               132
     Linker created                           32    2'048
 --------------------------------------------------------
-    Grand Total:                87'608    3'205   11'314
+    Grand Total:                87'596    3'206   11'311
 
 
 *******************************************************************************
@@ -644,9 +643,9 @@ shb_l.a: [5]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base    0x801'5e84          --   Gb  - Linker created -
-.iar.init_table$$Limit   0x801'5ea4          --   Gb  - Linker created -
-?main                    0x801'5f85         Code  Gb  cmain.o [4]
+.iar.init_table$$Base    0x801'5e78          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x801'5e98          --   Gb  - Linker created -
+?main                    0x801'5f79         Code  Gb  cmain.o [4]
 ADC_ConversionStop       0x801'047b   0x4a  Code  Gb  stm32wlxx_hal_adc.o [1]
 ADC_Disable              0x801'05b1   0x64  Code  Gb  stm32wlxx_hal_adc.o [1]
 ADC_Enable               0x801'04cd   0x88  Code  Gb  stm32wlxx_hal_adc.o [1]
@@ -657,8 +656,8 @@ AES_CMAC_Final           0x800'bd9f   0xac  Code  Gb  cmac.o [1]
 AES_CMAC_Init            0x800'bcb9   0x22  Code  Gb  cmac.o [1]
 AES_CMAC_SetKey          0x800'bcdb    0xa  Code  Gb  cmac.o [1]
 AES_CMAC_Update          0x800'bce5   0x9c  Code  Gb  cmac.o [1]
-AHBPrescTable            0x801'59ac   0x40  Data  Gb  system_stm32wlxx.o [1]
-APBPrescTable            0x801'5f64   0x20  Data  Gb  system_stm32wlxx.o [1]
+AHBPrescTable            0x801'59a0   0x40  Data  Gb  system_stm32wlxx.o [1]
+APBPrescTable            0x801'5f58   0x20  Data  Gb  system_stm32wlxx.o [1]
 AckTimeoutRetriesFinalize
                          0x800'27ed   0x44  Code  Lc  LoRaMac.o [1]
 AckTimeoutRetriesProcess
@@ -668,20 +667,20 @@ AppData                 0x2000'0044    0x8  Data  Lc  app.o [1]
 AppData                 0x2000'009c    0x8  Data  Lc  LmHandler.o [1]
 AppDataBuffer           0x2000'1934   0xf4  Data  Lc  app.o [1]
 AppDataBuffer           0x2000'1a28   0xf4  Data  Lc  LmHandler.o [1]
-App_Init                 0x801'3d01  0x11c  Code  Gb  app.o [1]
+App_Init                 0x801'3cf1  0x122  Code  Gb  app.o [1]
 Bandwidths               0x800'd520    0x4  Data  Gb  radio.o [1]
 BandwidthsAS923          0x800'697c   0x20  Data  Lc  RegionAS923.o [1]
-BandwidthsAU915          0x801'5bd0   0x40  Data  Lc  RegionAU915.o [1]
+BandwidthsAU915          0x801'5bc4   0x40  Data  Lc  RegionAU915.o [1]
 BandwidthsCN470          0x800'7cb8   0x18  Data  Lc  RegionCN470.o [1]
 BandwidthsCN779          0x800'8714   0x20  Data  Lc  RegionCN779.o [1]
 BandwidthsEU433          0x800'9190   0x20  Data  Lc  RegionEU433.o [1]
 BandwidthsEU868          0x800'9c98   0x20  Data  Lc  RegionEU868.o [1]
 BandwidthsIN865          0x800'a728   0x20  Data  Lc  RegionIN865.o [1]
 BandwidthsRU864          0x800'bc60   0x20  Data  Lc  RegionRU864.o [1]
-BandwidthsUS915          0x801'5c10   0x40  Data  Lc  RegionUS915.o [1]
+BandwidthsUS915          0x801'5c04   0x40  Data  Lc  RegionUS915.o [1]
 BusFault_Handler         0x800'f923    0xc  Code  Gb  stm32wlxx_it.o [1]
-CSTACK$$Base            0x2000'2438          --   Gb  - Linker created -
-CSTACK$$Limit           0x2000'2c38          --   Gb  - Linker created -
+CSTACK$$Base            0x2000'2430          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'2c30          --   Gb  - Linker created -
 CalculateBackOff         0x800'1fb9   0x22  Code  Lc  LoRaMac.o [1]
 CallNvmDataChangeCallback
                          0x800'276d   0x28  Code  Lc  LoRaMac.o [1]
@@ -701,8 +700,8 @@ ComputeRxWindowParameters
                          0x800'1ccd   0x8c  Code  Lc  LoRaMac.o [1]
 ConfirmQueueCtx         0x2000'226c   0x24  Data  Lc  LoRaMacConfirmQueue.o [1]
 Crc32                    0x800'568f   0x32  Code  Gb  utilities.o [1]
-CryptoNvm               0x2000'2410    0x4  Data  Lc  LoRaMacCrypto.o [1]
-CtxRestoreDone          0x2000'2432    0x1  Data  Lc  LmHandler.o [1]
+CryptoNvm               0x2000'240c    0x4  Data  Lc  LoRaMacCrypto.o [1]
+CtxRestoreDone          0x2000'242e    0x1  Data  Lc  LmHandler.o [1]
 CurrentTaskIdx          0x2000'0134    0x4  Data  Lc  stm32_seq.o [1]
 DMA1_Channel1_IRQHandler
                          0x800'f971    0xa  Code  Gb  stm32wlxx_it.o [1]
@@ -722,7 +721,7 @@ DMA_CalcDMAMUXChannelBaseAndMask
                          0x801'1b15   0x4c  Code  Lc  stm32wlxx_hal_dma.o [1]
 DMA_CalcDMAMUXRequestGenBaseAndMask
                          0x801'1b61   0x20  Code  Lc  stm32wlxx_hal_dma.o [1]
-DatarateOffsetsAU915     0x801'5ddc   0x2c  Data  Lc  RegionAU915.o [1]
+DatarateOffsetsAU915     0x801'5dd0   0x2c  Data  Lc  RegionAU915.o [1]
 DatarateOffsetsUS915     0x800'b21c   0x14  Data  Lc  RegionUS915.o [1]
 DataratesAS923           0x800'6974    0x8  Data  Lc  RegionAS923.o [1]
 DataratesAU915           0x800'745c   0x10  Data  Lc  RegionAU915.o [1]
@@ -736,7 +735,7 @@ DataratesUS915           0x800'b20c   0x10  Data  Lc  RegionUS915.o [1]
 DebugMon_Handler         0x800'f939    0x2  Code  Gb  stm32wlxx_it.o [1]
 DeriveSessionKey10x      0x800'4dbf   0x6a  Code  Lc  LoRaMacCrypto.o [1]
 DetermineFrameType       0x800'2637   0x68  Code  Lc  LoRaMac.o [1]
-DisplayClassUpdate       0x801'4e6d   0x1c  Code  Lc  LmHandler.o [1]
+DisplayClassUpdate       0x801'4e61   0x1c  Code  Lc  LmHandler.o [1]
 EXTI0_IRQHandler         0x800'f9fd    0xa  Code  Gb  stm32wlxx_it.o [1]
 EXTI15_10_IRQHandler     0x800'fa3b    0xc  Code  Gb  stm32wlxx_it.o [1]
 EXTI1_IRQHandler         0x800'fa07    0xa  Code  Gb  stm32wlxx_it.o [1]
@@ -754,7 +753,7 @@ Error_Handler            0x800'faa1    0xc  Code  Gb  stm32wlxx_it.o [1]
 EvtSet                  0x2000'012c    0x4  Data  Lc  stm32_seq.o [1]
 EvtWaited               0x2000'0130    0x4  Data  Lc  stm32_seq.o [1]
 FrequencyError          0x2000'23a0    0x4  Data  Gb  radio_driver.o [1]
-FskBandwidths            0x801'57e8   0xb0  Data  Lc  radio_driver.o [1]
+FskBandwidths            0x801'57dc   0xb0  Data  Lc  radio_driver.o [1]
 GPIO_EXTI_IRQHandler     0x800'f9d9   0x24  Code  Gb  stm32wlxx_it.o [1]
 GetBatteryLevel          0x800'ea71   0x40  Code  Gb  sys_app.o [1]
 GetDevAddr               0x800'eb43   0x28  Code  Gb  sys_app.o [1]
@@ -829,18 +828,18 @@ HAL_NVIC_SetPriority     0x800'fae1   0x3a  Code  Gb  stm32wlxx_hal_cortex.o [1]
 HAL_NVIC_SetPriorityGrouping
                          0x800'fac7   0x1a  Code  Gb  stm32wlxx_hal_cortex.o [1]
 HAL_PWREx_DisableLowPowerRunMode
-                         0x801'36f9   0x2e  Code  Gb  stm32wlxx_hal_pwr_ex.o [1]
+                         0x801'36e9   0x2e  Code  Gb  stm32wlxx_hal_pwr_ex.o [1]
 HAL_PWREx_EnableLowPowerRunMode
-                         0x801'36ed    0x2  Code  Gb  stm32wlxx_hal_pwr_ex.o [1]
+                         0x801'36dd    0x2  Code  Gb  stm32wlxx_hal_pwr_ex.o [1]
 HAL_PWREx_EnterSTOP2Mode
-                         0x801'373f   0x26  Code  Gb  stm32wlxx_hal_pwr_ex.o [1]
+                         0x801'372f   0x26  Code  Gb  stm32wlxx_hal_pwr_ex.o [1]
 HAL_PWREx_GetVoltageRange
-                         0x801'36e1    0xc  Code  Gb  stm32wlxx_hal_pwr_ex.o [1]
+                         0x801'36d1    0xc  Code  Gb  stm32wlxx_hal_pwr_ex.o [1]
 HAL_PWR_EnableBkUpAccess
-                         0x801'368d    0xc  Code  Gb  stm32wlxx_hal_pwr.o [1]
-HAL_PWR_EnterSLEEPMode   0x801'3699   0x3a  Code  Gb  stm32wlxx_hal_pwr.o [1]
+                         0x801'367d    0xc  Code  Gb  stm32wlxx_hal_pwr.o [1]
+HAL_PWR_EnterSLEEPMode   0x801'3689   0x3a  Code  Gb  stm32wlxx_hal_pwr.o [1]
 HAL_RCCEx_PeriphCLKConfig
-                         0x801'37b1  0x162  Code  Gb  stm32wlxx_hal_rcc_ex.o [1]
+                         0x801'37a1  0x162  Code  Gb  stm32wlxx_hal_rcc_ex.o [1]
 HAL_RCC_ClockConfig      0x801'0ae5  0x1ae  Code  Gb  stm32wlxx_hal_rcc.o [1]
 HAL_RCC_GetHCLKFreq      0x801'0d6b    0xa  Code  Gb  stm32wlxx_hal_rcc.o [1]
 HAL_RCC_GetPCLK1Freq     0x801'0d87   0x10  Code  Gb  stm32wlxx_hal_rcc.o [1]
@@ -849,7 +848,7 @@ HAL_RCC_GetSysClockFreq
                          0x801'0cab   0xc0  Code  Gb  stm32wlxx_hal_rcc.o [1]
 HAL_RCC_OscConfig        0x801'0637  0x46c  Code  Gb  stm32wlxx_hal_rcc.o [1]
 HAL_RTCEx_AlarmBEventCallback
-                         0x801'3925    0x2  Code  Wk  stm32wlxx_hal_rtc_ex.o [1]
+                         0x801'3915    0x2  Code  Wk  stm32wlxx_hal_rtc_ex.o [1]
 HAL_RTCEx_BKUPRead       0x801'1679    0xa  Code  Gb  stm32wlxx_hal_rtc_ex.o [1]
 HAL_RTCEx_BKUPWrite      0x801'166f    0xa  Code  Gb  stm32wlxx_hal_rtc_ex.o [1]
 HAL_RTCEx_EnableBypassShadow
@@ -869,7 +868,7 @@ HAL_RTC_Init             0x801'124d   0x96  Code  Gb  stm32wlxx_hal_rtc.o [1]
 HAL_RTC_MspInit          0x801'11d7   0x64  Code  Gb  rtc.o [1]
 HAL_RTC_SetAlarm_IT      0x801'12e3   0x8c  Code  Gb  stm32wlxx_hal_rtc.o [1]
 HAL_RTC_WaitForSynchro   0x801'14ed   0x2e  Code  Gb  stm32wlxx_hal_rtc.o [1]
-HAL_ResumeTick           0x801'5b79   0x10  Code  Wk  stm32wlxx_hal.o [1]
+HAL_ResumeTick           0x801'5b6d   0x10  Code  Wk  stm32wlxx_hal.o [1]
 HAL_SPI_IRQHandler       0x801'217d  0x100  Code  Gb  stm32wlxx_hal_spi.o [1]
 HAL_SUBGHZ_CADStatusCallback
                          0x800'e90d   0x16  Code  Gb  radio_driver.o [1]
@@ -900,19 +899,19 @@ HAL_SUBGHZ_TxCpltCallback
 HAL_SUBGHZ_WriteBuffer   0x800'f1b3   0x4c  Code  Gb  stm32wlxx_hal_subghz.o [1]
 HAL_SUBGHZ_WriteRegisters
                          0x800'f015   0x5c  Code  Gb  stm32wlxx_hal_subghz.o [1]
-HAL_SuspendTick          0x801'5b69   0x10  Code  Wk  stm32wlxx_hal.o [1]
+HAL_SuspendTick          0x801'5b5d   0x10  Code  Wk  stm32wlxx_hal.o [1]
 HAL_UARTEx_DisableFifoMode
-                         0x801'437d   0x3c  Code  Gb  stm32wlxx_hal_uart_ex.o [1]
+                         0x801'4371   0x3c  Code  Gb  stm32wlxx_hal_uart_ex.o [1]
 HAL_UARTEx_RxFifoFullCallback
-                         0x801'3927    0x2  Code  Wk  stm32wlxx_hal_uart_ex.o [1]
+                         0x801'3917    0x2  Code  Wk  stm32wlxx_hal_uart_ex.o [1]
 HAL_UARTEx_SetRxFifoThreshold
-                         0x801'43cf   0x14  Code  Gb  stm32wlxx_hal_uart_ex.o [1]
+                         0x801'43c3   0x14  Code  Gb  stm32wlxx_hal_uart_ex.o [1]
 HAL_UARTEx_SetTxFifoThreshold
-                         0x801'43b9   0x16  Code  Gb  stm32wlxx_hal_uart_ex.o [1]
+                         0x801'43ad   0x16  Code  Gb  stm32wlxx_hal_uart_ex.o [1]
 HAL_UARTEx_TxFifoEmptyCallback
-                         0x801'3cff    0x2  Code  Wk  stm32wlxx_hal_uart_ex.o [1]
+                         0x801'3cef    0x2  Code  Wk  stm32wlxx_hal_uart_ex.o [1]
 HAL_UARTEx_WakeupCallback
-                         0x801'4475    0x2  Code  Wk  stm32wlxx_hal_uart_ex.o [1]
+                         0x801'4469    0x2  Code  Wk  stm32wlxx_hal_uart_ex.o [1]
 HAL_UART_GetState        0x801'27e9    0xc  Code  Gb  stm32wlxx_hal_uart.o [1]
 HAL_UART_IRQHandler      0x801'24e1  0x2b0  Code  Gb  stm32wlxx_hal_uart.o [1]
 HAL_UART_Init            0x801'2299   0x34  Code  Gb  stm32wlxx_hal_uart.o [1]
@@ -922,7 +921,7 @@ HAL_UART_RegisterCallback
                          0x801'232d   0x96  Code  Gb  stm32wlxx_hal_uart.o [1]
 HAL_UART_Transmit_IT     0x801'23c5   0xaa  Code  Gb  stm32wlxx_hal_uart.o [1]
 HAL_UART_TxCpltCallback
-                         0x801'3b61   0x4e  Code  Gb  main.o [1]
+                         0x801'3b51   0x4e  Code  Gb  main.o [1]
 HandleRadioRxErrorTimeout
                          0x800'0ab9   0xea  Code  Lc  LoRaMac.o [1]
 HardFault_Handler        0x800'f90b    0xc  Code  Gb  stm32wlxx_it.o [1]
@@ -949,9 +948,9 @@ LL_ADC_REG_IsTriggerSourceSWStart
 LL_ADC_SetSamplingTimeCommonChannels
                          0x800'fe55   0x18  Code  Lc  stm32wlxx_hal_adc.o [1]
 LL_AHB1_GRP1_EnableClock
-                         0x801'3949   0x18  Code  Lc  main.o [1]
+                         0x801'3939   0x18  Code  Lc  main.o [1]
 LL_AHB2_GRP1_EnableClock
-                         0x801'3961   0x18  Code  Lc  main.o [1]
+                         0x801'3951   0x18  Code  Lc  main.o [1]
 LL_APB1_GRP1_EnableClock
                          0x801'1145   0x16  Code  Lc  rtc.o [1]
 LL_APB1_GRP1_EnableClock
@@ -966,88 +965,88 @@ LL_APB2_GRP1_EnableClock
                          0x801'0ed5   0x18  Code  Lc  stm32wlxx_hal_msp.o [1]
 LL_APB3_GRP1_EnableClock
                          0x800'eba9   0x16  Code  Lc  subghz.o [1]
-LL_EXTI_EnableIT_0_31    0x801'3979    0xc  Code  Lc  main.o [1]
+LL_EXTI_EnableIT_0_31    0x801'3969    0xc  Code  Lc  main.o [1]
 LL_EXTI_EnableIT_32_63   0x801'1695    0xa  Code  Lc  debug.o [1]
 LL_FLASH_GetDeviceID     0x800'ea4b    0xa  Code  Lc  sys_app.o [1]
 LL_FLASH_GetSTCompanyID
                          0x800'ea55    0x8  Code  Lc  sys_app.o [1]
 LL_FLASH_GetUDN          0x800'ea45    0x6  Code  Lc  sys_app.o [1]
 LL_LPUART_ClearFlag_ORE
-                         0x801'39ad    0x6  Code  Lc  main.o [1]
+                         0x801'399d    0x6  Code  Lc  main.o [1]
 LL_LPUART_ClearFlag_WKUP
-                         0x801'39b3    0x8  Code  Lc  main.o [1]
+                         0x801'39a3    0x8  Code  Lc  main.o [1]
 LL_LPUART_EnableIT_WKUP
-                         0x801'39bb   0x1c  Code  Lc  main.o [1]
+                         0x801'39ab   0x1c  Code  Lc  main.o [1]
 LL_LPUART_EnableInStopMode
-                         0x801'3985   0x14  Code  Lc  main.o [1]
+                         0x801'3975   0x14  Code  Lc  main.o [1]
 LL_LPUART_IsActiveFlag_BUSY
-                         0x801'3999    0xa  Code  Lc  main.o [1]
+                         0x801'3989    0xa  Code  Lc  main.o [1]
 LL_LPUART_IsActiveFlag_REACK
-                         0x801'39a3    0xa  Code  Lc  main.o [1]
+                         0x801'3993    0xa  Code  Lc  main.o [1]
 LL_PWR_ClearFlag_C1STOP_C1STB
-                         0x801'5b1d    0x8  Code  Lc  stm32_lpm_if.o [1]
+                         0x801'5b11    0x8  Code  Lc  stm32_lpm_if.o [1]
 LL_RCC_EnableRTC         0x801'1139    0xc  Code  Lc  rtc.o [1]
 LL_RCC_GetAHB3Prescaler
                          0x801'0629    0xe  Code  Lc  stm32wlxx_hal_rcc.o [1]
 LL_RCC_LSE_SetDriveCapability
-                         0x801'3929   0x10  Code  Lc  main.o [1]
+                         0x801'3919   0x10  Code  Lc  main.o [1]
 LL_RCC_SetClkAfterWakeFromStop
-                         0x801'3939   0x10  Code  Lc  main.o [1]
+                         0x801'3929   0x10  Code  Lc  main.o [1]
 LL_RCC_SetI2CClockSource
-                         0x801'3783   0x14  Code  Lc  stm32wlxx_hal_rcc_ex.o [1]
+                         0x801'3773   0x14  Code  Lc  stm32wlxx_hal_rcc_ex.o [1]
 LL_RCC_SetLPTIMClockSource
-                         0x801'379d   0x14  Code  Lc  stm32wlxx_hal_rcc_ex.o [1]
+                         0x801'378d   0x14  Code  Lc  stm32wlxx_hal_rcc_ex.o [1]
 LL_RCC_SetUSARTClockSource
-                         0x801'3775    0xe  Code  Lc  stm32wlxx_hal_rcc_ex.o [1]
+                         0x801'3765    0xe  Code  Lc  stm32wlxx_hal_rcc_ex.o [1]
 LL_RTC_TIME_GetSubSecond
                          0x800'f699    0x4  Code  Lc  timer_if.o [1]
 LPUART1_IRQHandler       0x800'f9c1    0xa  Code  Gb  stm32wlxx_it.o [1]
 LimitTxPower             0x800'a795   0x36  Code  Lc  RegionUS915.o [1]
 LmHandlerCallbacks      0x2000'0000   0x34  Data  Lc  app.o [1]
-LmHandlerCallbacks      0x2000'2404    0x4  Data  Lc  LmHandler.o [1]
-LmHandlerConfigure       0x801'4551  0x1bc  Code  Gb  LmHandler.o [1]
-LmHandlerDeviceTimeReq   0x801'4911   0x26  Code  Gb  LmHandler.o [1]
+LmHandlerCallbacks      0x2000'2400    0x4  Data  Lc  LmHandler.o [1]
+LmHandlerConfigure       0x801'4545  0x1bc  Code  Gb  LmHandler.o [1]
+LmHandlerDeviceTimeReq   0x801'4905   0x26  Code  Gb  LmHandler.o [1]
 LmHandlerGetCurrentClass
-                         0x801'4a25   0x32  Code  Gb  LmHandler.o [1]
-LmHandlerGetTxDatarate   0x801'4a57   0x3a  Code  Gb  LmHandler.o [1]
-LmHandlerInit            0x801'44f1   0x60  Code  Gb  LmHandler.o [1]
-LmHandlerJoin            0x801'471d   0x8e  Code  Gb  LmHandler.o [1]
-LmHandlerJoinStatus      0x801'47ab   0x30  Code  Gb  LmHandler.o [1]
+                         0x801'4a19   0x32  Code  Gb  LmHandler.o [1]
+LmHandlerGetTxDatarate   0x801'4a4b   0x3a  Code  Gb  LmHandler.o [1]
+LmHandlerInit            0x801'44e5   0x60  Code  Gb  LmHandler.o [1]
+LmHandlerJoin            0x801'4711   0x8e  Code  Gb  LmHandler.o [1]
+LmHandlerJoinStatus      0x801'479f   0x30  Code  Gb  LmHandler.o [1]
 LmHandlerPackageIsInitialized
-                         0x801'4d07   0x30  Code  Lc  LmHandler.o [1]
+                         0x801'4cfb   0x30  Code  Lc  LmHandler.o [1]
 LmHandlerPackageRegister
-                         0x801'4c83   0x84  Code  Gb  LmHandler.o [1]
+                         0x801'4c77   0x84  Code  Gb  LmHandler.o [1]
 LmHandlerPackages       0x2000'2320   0x14  Data  Lc  LmHandler.o [1]
 LmHandlerPackagesNotify
-                         0x801'4d37   0xb2  Code  Lc  LmHandler.o [1]
+                         0x801'4d2b   0xb2  Code  Lc  LmHandler.o [1]
 LmHandlerPackagesProcess
-                         0x801'4de9   0x46  Code  Lc  LmHandler.o [1]
+                         0x801'4ddd   0x46  Code  Lc  LmHandler.o [1]
 LmHandlerParams         0x2000'0034   0x10  Data  Lc  app.o [1]
 LmHandlerParams         0x2000'2348   0x10  Data  Lc  LmHandler.o [1]
-LmHandlerProcess         0x801'470d   0x10  Code  Gb  LmHandler.o [1]
-LmHandlerRequestClass    0x801'4937   0xee  Code  Gb  LmHandler.o [1]
-LmHandlerSend            0x801'47db  0x136  Code  Gb  LmHandler.o [1]
+LmHandlerProcess         0x801'4701   0x10  Code  Gb  LmHandler.o [1]
+LmHandlerRequestClass    0x801'492b   0xee  Code  Gb  LmHandler.o [1]
+LmHandlerSend            0x801'47cf  0x136  Code  Gb  LmHandler.o [1]
 LmHandlerSetSystemMaxRxError
-                         0x801'4a91   0x24  Code  Lc  LmHandler.o [1]
-LmhpComplianceInit       0x801'5139   0x1c  Code  Lc  LmhpCompliance.o [1]
+                         0x801'4a85   0x24  Code  Lc  LmHandler.o [1]
+LmhpComplianceInit       0x801'512d   0x1c  Code  Lc  LmhpCompliance.o [1]
 LmhpComplianceIsInitialized
-                         0x801'5155    0x6  Code  Lc  LmhpCompliance.o [1]
+                         0x801'5149    0x6  Code  Lc  LmhpCompliance.o [1]
 LmhpComplianceIsRunning
-                         0x801'515b    0xa  Code  Lc  LmhpCompliance.o [1]
+                         0x801'514f    0xa  Code  Lc  LmhpCompliance.o [1]
 LmhpComplianceOnMcpsConfirm
-                         0x801'5165   0x1e  Code  Lc  LmhpCompliance.o [1]
+                         0x801'5159   0x1e  Code  Lc  LmhpCompliance.o [1]
 LmhpComplianceOnMcpsIndication
-                         0x801'5225  0x1be  Code  Lc  LmhpCompliance.o [1]
+                         0x801'5219  0x1be  Code  Lc  LmhpCompliance.o [1]
 LmhpComplianceOnMlmeConfirm
-                         0x801'5183   0x22  Code  Lc  LmhpCompliance.o [1]
+                         0x801'5177   0x22  Code  Lc  LmhpCompliance.o [1]
 LmhpCompliancePackage   0x2000'00b8   0x34  Data  Lc  LmhpCompliance.o [1]
 LmhpCompliancePackageFactory
-                         0x801'5135    0x4  Code  Gb  LmhpCompliance.o [1]
+                         0x801'5129    0x4  Code  Gb  LmhpCompliance.o [1]
 LmhpComplianceParams    0x2000'007c    0xc  Data  Lc  LmHandler.o [1]
 LmhpComplianceParams    0x2000'00ec    0x4  Data  Lc  LmhpCompliance.o [1]
-LmhpComplianceProcess    0x801'5419    0x2  Code  Lc  LmhpCompliance.o [1]
+LmhpComplianceProcess    0x801'540d    0x2  Code  Lc  LmhpCompliance.o [1]
 LmhpComplianceTxProcess
-                         0x801'51a5   0x7e  Code  Lc  LmhpCompliance.o [1]
+                         0x801'5199   0x7e  Code  Lc  LmhpCompliance.o [1]
 LoRaHeaderType          0x2000'239d    0x1  Data  Lc  radio_driver.o [1]
 LoRaMacAdrCalcNext       0x800'59fd   0xc8  Code  Gb  LoRaMacAdr.o [1]
 LoRaMacCallbacks        0x2000'2334   0x14  Data  Lc  LmHandler.o [1]
@@ -1174,7 +1173,7 @@ LoRaMacHandleScheduleUplinkEvent
                          0x800'0cc3   0x26  Code  Lc  LoRaMac.o [1]
 LoRaMacInitialization    0x800'284d  0x3be  Code  Gb  LoRaMac.o [1]
 LoRaMacIsBusy            0x800'0c0d   0x1a  Code  Gb  LoRaMac.o [1]
-LoRaMacMaxEirpTable      0x801'6100   0x10  Data  Lc  LoRaMac.o [1]
+LoRaMacMaxEirpTable      0x801'60f4   0x10  Data  Lc  LoRaMac.o [1]
 LoRaMacMcpsRequest       0x800'36e5  0x1a0  Code  Gb  LoRaMac.o [1]
 LoRaMacMibClassBSetRequestConfirm
                          0x800'46fd    0x4  Code  Gb  LoRaMacClassB.o [1]
@@ -1189,19 +1188,19 @@ LoRaMacParserJoinAccept
 LoRaMacPrimitives       0x2000'2358   0x10  Data  Lc  LmHandler.o [1]
 LoRaMacProcess           0x800'0ff1   0x70  Code  Gb  LoRaMac.o [1]
 LoRaMacQueryTxPossible   0x800'2c1d   0xd2  Code  Gb  LoRaMac.o [1]
-LoRaMacRadioEvents      0x2000'2408    0x4  Data  Gb  LoRaMac.o [1]
+LoRaMacRadioEvents      0x2000'2404    0x4  Data  Gb  LoRaMac.o [1]
 LoRaMacSerializerData    0x800'5b31   0xcc  Code  Gb  LoRaMacSerializer.o [1]
 LoRaMacSerializerJoinRequest
                          0x800'5ac5   0x6c  Code  Gb  LoRaMacSerializer.o [1]
 LoRaMacStart             0x800'2c0b    0xc  Code  Gb  LoRaMac.o [1]
 LoRaMacTestSetDutyCycleOn
                          0x800'3885   0x20  Code  Gb  LoRaMac.o [1]
-LoraInfo_GetPtr          0x801'44e9    0x4  Code  Gb  lora_info.o [1]
-LoraInfo_Init            0x801'4479   0x70  Code  Gb  lora_info.o [1]
-MSIRangeTable            0x801'59ec   0x40  Data  Gb  system_stm32wlxx.o [1]
+LoraInfo_GetPtr          0x801'44dd    0x4  Code  Gb  lora_info.o [1]
+LoraInfo_Init            0x801'446d   0x70  Code  Gb  lora_info.o [1]
+MSIRangeTable            0x801'59e0   0x40  Data  Gb  system_stm32wlxx.o [1]
 MX_ADC_Init              0x800'fd19   0x68  Code  Gb  adc.o [1]
-MX_AppISR                0x801'332d    0x2  Code  Gb  appinit.o [1]
-MX_AppMain               0x801'3315   0x18  Code  Gb  appinit.o [1]
+MX_AppISR                0x801'3333    0x2  Code  Gb  appinit.o [1]
+MX_AppMain               0x801'3315   0x1e  Code  Gb  appinit.o [1]
 MX_Breakpoint            0x800'f8f1    0xe  Code  Gb  stm32wlxx_it.o [1]
 MX_DBG                   0x801'16bd   0x14  Code  Gb  debug.o [1]
 MX_DBG_Active            0x801'16b3    0xa  Code  Gb  debug.o [1]
@@ -1212,20 +1211,20 @@ MX_DBG_Resume            0x801'16d9    0xe  Code  Gb  debug.o [1]
 MX_DBG_RxCallback        0x801'16ad    0x6  Code  Gb  debug.o [1]
 MX_DBG_Suspend           0x801'16d1    0x8  Code  Gb  debug.o [1]
 MX_DBG_TxCpltCallback    0x801'169f    0xe  Code  Gb  debug.o [1]
-MX_DMA_Init              0x801'3b1f   0x16  Code  Gb  main.o [1]
-MX_GPIO_Init             0x801'3ab7   0x68  Code  Gb  main.o [1]
-MX_LPUART1_UART_Init     0x801'3baf   0x7a  Code  Gb  main.o [1]
-MX_LPUART1_UART_Resume   0x801'3c63    0x2  Code  Gb  main.o [1]
+MX_DMA_Init              0x801'3b0f   0x16  Code  Gb  main.o [1]
+MX_GPIO_Init             0x801'3aa7   0x68  Code  Gb  main.o [1]
+MX_LPUART1_UART_Init     0x801'3b9f   0x7a  Code  Gb  main.o [1]
+MX_LPUART1_UART_Resume   0x801'3c53    0x2  Code  Gb  main.o [1]
 MX_LPUART1_UART_Suspend
-                         0x801'3c29   0x3a  Code  Gb  main.o [1]
+                         0x801'3c19   0x3a  Code  Gb  main.o [1]
 MX_LPUART1_UART_Transmit
-                         0x801'3c65   0x40  Code  Gb  main.o [1]
+                         0x801'3c55   0x40  Code  Gb  main.o [1]
 MX_RTC_Init              0x801'115b   0x7c  Code  Gb  rtc.o [1]
 MX_SUBGHZ_Init           0x800'ebbf   0x16  Code  Gb  subghz.o [1]
-MX_UART_TxCpltCallback   0x801'3b35   0x2c  Code  Gb  main.o [1]
+MX_UART_TxCpltCallback   0x801'3b25   0x2c  Code  Gb  main.o [1]
 MX_UTIL_Init             0x800'5e95   0x28  Code  Gb  util_if.o [1]
 MacCtx                  0x2000'0880  0x508  Data  Lc  LoRaMac.o [1]
-MaxPayloadLength        0x2000'014d    0x1  Data  Lc  radio.o [1]
+MaxPayloadLength        0x2000'014e    0x1  Data  Lc  radio.o [1]
 MaxPayloadOfDatarateCN470
                          0x800'7cd0    0x8  Data  Lc  RegionCN470.o [1]
 MaxPayloadOfDatarateCN779
@@ -1268,47 +1267,47 @@ MaxPayloadOfDatarateRepeaterUS915
                          0x800'b240   0x10  Data  Lc  RegionUS915.o [1]
 MaxPayloadOfDatarateUS915
                          0x800'b230   0x10  Data  Lc  RegionUS915.o [1]
-McpsConfirm              0x801'4ab5   0x3a  Code  Lc  LmHandler.o [1]
-McpsIndication           0x801'4af1   0xa0  Code  Lc  LmHandler.o [1]
+McpsConfirm              0x801'4aa9   0x3a  Code  Lc  LmHandler.o [1]
+McpsIndication           0x801'4ae5   0xa0  Code  Lc  LmHandler.o [1]
 MemManage_Handler        0x800'f917    0xc  Code  Gb  stm32wlxx_it.o [1]
-MlmeConfirm              0x801'4b91   0x90  Code  Lc  LmHandler.o [1]
-MlmeIndication           0x801'4c21   0x62  Code  Lc  LmHandler.o [1]
+MlmeConfirm              0x801'4b85   0x90  Code  Lc  LmHandler.o [1]
+MlmeIndication           0x801'4c15   0x62  Code  Lc  LmHandler.o [1]
 NMI_Handler              0x800'f8ff    0xc  Code  Gb  stm32wlxx_it.o [1]
 Nvm                     0x2000'0150  0x730  Data  Lc  LoRaMac.o [1]
-NvmDataMgmtEvent         0x801'512b    0x2  Code  Gb  NvmDataMgmt.o [1]
-NvmDataMgmtRestore       0x801'5131    0x4  Code  Gb  NvmDataMgmt.o [1]
-NvmDataMgmtStore         0x801'512d    0x4  Code  Gb  NvmDataMgmt.o [1]
+NvmDataMgmtEvent         0x801'511f    0x2  Code  Gb  NvmDataMgmt.o [1]
+NvmDataMgmtRestore       0x801'5125    0x4  Code  Gb  NvmDataMgmt.o [1]
+NvmDataMgmtStore         0x801'5121    0x4  Code  Gb  NvmDataMgmt.o [1]
 OffModeDisable          0x2000'23f0    0x4  Data  Lc  stm32_lpm.o [1]
 OnAckTimeoutTimerEvent   0x800'1145   0x52  Code  Lc  LoRaMac.o [1]
 OnComplianceTxNextPacketTimerEvent
-                         0x801'541d    0x2  Code  Lc  LmhpCompliance.o [1]
-OnJoinRequest            0x801'4151   0x56  Code  Lc  app.o [1]
-OnJoinTimerLedEvent      0x801'40c5    0xa  Code  Lc  app.o [1]
-OnMacProcessNotify       0x801'4221    0xc  Code  Lc  app.o [1]
+                         0x801'5411    0x2  Code  Lc  LmhpCompliance.o [1]
+OnJoinRequest            0x801'4145   0x56  Code  Lc  app.o [1]
+OnJoinTimerLedEvent      0x801'40b9    0xa  Code  Lc  app.o [1]
+OnMacProcessNotify       0x801'4215    0xc  Code  Lc  app.o [1]
 OnRadioRxDone            0x800'0191   0x64  Code  Lc  LoRaMac.o [1]
 OnRadioRxError           0x800'0231   0x2e  Code  Lc  LoRaMac.o [1]
 OnRadioRxTimeout         0x800'025f   0x3c  Code  Lc  LoRaMac.o [1]
 OnRadioTxDone            0x800'0139   0x58  Code  Lc  LoRaMac.o [1]
 OnRadioTxTimeout         0x800'01f5   0x3c  Code  Lc  LoRaMac.o [1]
-OnRxData                 0x801'3e1d   0xa2  Code  Lc  app.o [1]
+OnRxData                 0x801'3e13   0xa2  Code  Lc  app.o [1]
 OnRxData{1}{2}::slotStrings
                         0x2000'004c   0x18  Data  Lc  app.o [1]
-OnRxTimerLedEvent        0x801'40b9    0xc  Code  Lc  app.o [1]
+OnRxTimerLedEvent        0x801'40ad    0xc  Code  Lc  app.o [1]
 OnRxWindow1TimerEvent    0x800'10b3   0x46  Code  Lc  LoRaMac.o [1]
 OnRxWindow2TimerEvent    0x800'10f9   0x4c  Code  Lc  LoRaMac.o [1]
-OnTxData                 0x801'40cf   0x82  Code  Lc  app.o [1]
+OnTxData                 0x801'40c3   0x82  Code  Lc  app.o [1]
 OnTxDelayedTimerEvent    0x800'1061   0x52  Code  Lc  LoRaMac.o [1]
-OnTxTimerEvent           0x801'4099   0x14  Code  Lc  app.o [1]
-OnTxTimerLedEvent        0x801'40ad    0xc  Code  Lc  app.o [1]
+OnTxTimerEvent           0x801'408d   0x14  Code  Lc  app.o [1]
+OnTxTimerLedEvent        0x801'40a1    0xc  Code  Lc  app.o [1]
 OpenContinuousRxCWindow
                          0x800'21b3   0x58  Code  Lc  LoRaMac.o [1]
 OperatingMode           0x2000'2394    0x1  Data  Lc  radio_driver.o [1]
-PWR_EnterOffMode         0x801'5b29    0x2  Code  Gb  stm32_lpm_if.o [1]
-PWR_EnterSleepMode       0x801'5b4f   0x10  Code  Gb  stm32_lpm_if.o [1]
-PWR_EnterStopMode        0x801'5b2d   0x16  Code  Gb  stm32_lpm_if.o [1]
-PWR_ExitOffMode          0x801'5b2b    0x2  Code  Gb  stm32_lpm_if.o [1]
-PWR_ExitSleepMode        0x801'5b5f    0x8  Code  Gb  stm32_lpm_if.o [1]
-PWR_ExitStopMode         0x801'5b43    0xc  Code  Gb  stm32_lpm_if.o [1]
+PWR_EnterOffMode         0x801'5b1d    0x2  Code  Gb  stm32_lpm_if.o [1]
+PWR_EnterSleepMode       0x801'5b43   0x10  Code  Gb  stm32_lpm_if.o [1]
+PWR_EnterStopMode        0x801'5b21   0x16  Code  Gb  stm32_lpm_if.o [1]
+PWR_ExitOffMode          0x801'5b1f    0x2  Code  Gb  stm32_lpm_if.o [1]
+PWR_ExitSleepMode        0x801'5b53    0x8  Code  Gb  stm32_lpm_if.o [1]
+PWR_ExitStopMode         0x801'5b37    0xc  Code  Gb  stm32_lpm_if.o [1]
 PacketType              0x2000'239c    0x1  Data  Lc  radio_driver.o [1]
 PayloadEncrypt           0x800'4c91   0xc4  Code  Lc  LoRaMacCrypto.o [1]
 PendSV_Handler           0x800'f93b    0x2  Code  Gb  stm32wlxx_it.o [1]
@@ -1353,8 +1352,8 @@ RTC_Alarm_IRQHandler     0x800'fa47    0xa  Code  Gb  stm32wlxx_it.o [1]
 RTC_ByteToBcd2           0x801'15bd   0x16  Code  Gb  stm32wlxx_hal_rtc.o [1]
 RTC_EnterInitMode        0x801'151b   0x40  Code  Gb  stm32wlxx_hal_rtc.o [1]
 RTC_ExitInitMode         0x801'155b   0x4c  Code  Gb  stm32wlxx_hal_rtc.o [1]
-RTC_Initialized         0x2000'2433    0x1  Data  Lc  timer_if.o [1]
-Radio                    0x801'5928   0x84  Data  Gb  radio.o [1]
+RTC_Initialized         0x2000'242f    0x1  Data  Lc  timer_if.o [1]
+Radio                    0x801'591c   0x84  Data  Gb  radio.o [1]
 RadioBuffer             0x2000'1738  0x100  Data  Lc  radio.o [1]
 RadioCheckRfFrequency    0x800'd3fd    0x4  Code  Lc  radio.o [1]
 RadioEvents             0x2000'1dcc    0x4  Data  Lc  radio.o [1]
@@ -1397,8 +1396,8 @@ RadioTxPrbs              0x800'dc41   0x28  Code  Lc  radio.o [1]
 RadioWrite               0x800'd80d    0x4  Code  Lc  radio.o [1]
 RadioWriteRegisters      0x800'd815    0x4  Code  Lc  radio.o [1]
 Radio_SMPS_Set           0x800'e94d   0x28  Code  Lc  radio_driver.o [1]
-Region$$Table$$Base      0x801'5e84          --   Gb  - Linker created -
-Region$$Table$$Limit     0x801'5ea4          --   Gb  - Linker created -
+Region$$Table$$Base      0x801'5e78          --   Gb  - Linker created -
+Region$$Table$$Limit     0x801'5e98          --   Gb  - Linker created -
 RegionAS923AlternateDr   0x800'6705    0x4  Code  Gb  RegionAS923.o [1]
 RegionAS923ApplyCFList   0x800'6219   0x7e  Code  Gb  RegionAS923.o [1]
 RegionAS923ApplyDrOffset
@@ -1714,6 +1713,7 @@ RegionRxParamSetupReq    0x800'43e5   0x4c  Code  Gb  Region.o [1]
 RegionSetBandTxDone      0x800'409d   0x4a  Code  Gb  Region.o [1]
 RegionSetContinuousWave
                          0x800'45e5   0x4a  Code  Gb  Region.o [1]
+RegionSwitchSelection   0x2000'014d    0x1  Data  Gb  appinit.o [1]
 RegionTxConfig           0x800'42e1   0x88  Code  Gb  Region.o [1]
 RegionTxParamSetupReq    0x800'447d   0x4c  Code  Gb  Region.o [1]
 RegionUS915AlternateDr   0x800'afef   0x2a  Code  Gb  RegionUS915.o [1]
@@ -1747,14 +1747,14 @@ RegionVerify             0x800'4135   0x50  Code  Gb  Region.o [1]
 RemoveMacCommands        0x800'1fdb   0x38  Code  Lc  LoRaMac.o [1]
 ResetMacParameters       0x800'2013  0x160  Code  Lc  LoRaMac.o [1]
 RestoreNvmData           0x800'2529  0x10e  Code  Lc  LoRaMac.o [1]
-RtcTimerContext         0x2000'242c    0x4  Data  Lc  timer_if.o [1]
+RtcTimerContext         0x2000'2428    0x4  Data  Lc  timer_if.o [1]
 RxDoneParams            0x2000'2378   0x10  Data  Gb  LoRaMac.o [1]
 RxLedTimer              0x2000'22c0   0x18  Data  Lc  app.o [1]
 RxParams                0x2000'008c   0x10  Data  Lc  LmHandler.o [1]
 RxTimeoutTimer          0x2000'1de8   0x18  Data  Gb  radio.o [1]
 RxWindowSetup            0x800'2173   0x40  Code  Lc  LoRaMac.o [1]
-SEQ_BitPosition          0x801'4339   0x32  Code  Gb  stm32_seq.o [1]
-SEQ_clz_table_4bit       0x801'436c   0x10  Data  Lc  stm32_seq.o [1]
+SEQ_BitPosition          0x801'432d   0x32  Code  Gb  stm32_seq.o [1]
+SEQ_clz_table_4bit       0x801'4360   0x10  Data  Lc  stm32_seq.o [1]
 SPI1_IRQHandler          0x800'f9a3    0xa  Code  Gb  stm32wlxx_it.o [1]
 SPI_DMAAbortOnError      0x801'227d   0x10  Code  Lc  stm32wlxx_hal_spi.o [1]
 SUBGHZSPI_Init           0x800'f305   0x20  Code  Gb  stm32wlxx_hal_subghz.o [1]
@@ -1832,7 +1832,7 @@ SYS_GetTemperatureLevel
                          0x800'f475   0x82  Code  Gb  adc_if.o [1]
 SYS_InitMeasurement      0x800'f46d    0x8  Code  Gb  adc_if.o [1]
 ScheduleTx               0x800'1df5  0x12e  Code  Lc  LoRaMac.o [1]
-SeNvm                   0x2000'2424    0x4  Data  Lc  soft-se.o [1]
+SeNvm                   0x2000'2420    0x4  Data  Lc  soft-se.o [1]
 SecureElementAesEncrypt
                          0x800'49ff   0x6e  Code  Gb  soft-se.o [1]
 SecureElementComputeAesCmac
@@ -1859,7 +1859,7 @@ SecureFrame              0x800'1f29   0x90  Code  Lc  LoRaMac.o [1]
 Send                     0x800'1aa9  0x17e  Code  Lc  LoRaMac.o [1]
 SendFrameOnChannel       0x800'23af   0xf0  Code  Lc  LoRaMac.o [1]
 SendReJoinReq            0x800'1c27   0x72  Code  Lc  LoRaMac.o [1]
-SendTxData               0x801'3ec1  0x1d8  Code  Lc  app.o [1]
+SendTxData               0x801'3eb5  0x1d8  Code  Lc  app.o [1]
 SerializeTxFrame         0x800'1d99   0x56  Code  Lc  LoRaMac.o [1]
 SetMlmeScheduleUplinkIndication
                          0x800'13af   0x12  Code  Lc  LoRaMac.o [1]
@@ -1879,9 +1879,9 @@ SysTimeSet               0x800'3ba5   0x36  Code  Gb  stm32_systime.o [1]
 SysTimeSub               0x800'3b5b   0x3a  Code  Gb  stm32_systime.o [1]
 SysTimeToMs              0x800'3c33   0x30  Code  Gb  stm32_systime.o [1]
 SystemApp_Init           0x800'ea65    0xc  Code  Gb  sys_app.o [1]
-SystemClock_Config       0x801'3a17   0xa0  Code  Gb  main.o [1]
+SystemClock_Config       0x801'3a07   0xa0  Code  Gb  main.o [1]
 SystemCoreClock         0x2000'0144    0x4  Data  Gb  system_stm32wlxx.o [1]
-SystemInit               0x801'620d    0x2  Code  Gb  system_stm32wlxx.o [1]
+SystemInit               0x801'6201    0x2  Code  Gb  system_stm32wlxx.o [1]
 TAMP_STAMP_LSECSS_SSRU_IRQHandler
                          0x800'f93f    0xa  Code  Gb  stm32wlxx_it.o [1]
 TIMER_IF_BkUp_Read_MSBticks
@@ -1928,23 +1928,23 @@ TimerExists              0x800'3a99   0x16  Code  Gb  stm32_timer.o [1]
 TimerInsertNewHeadTimer
                          0x800'3b01   0x10  Code  Gb  stm32_timer.o [1]
 TimerInsertTimer         0x800'3adb   0x26  Code  Gb  stm32_timer.o [1]
-TimerListHead           0x2000'2428    0x4  Data  Lc  stm32_timer.o [1]
+TimerListHead           0x2000'2424    0x4  Data  Lc  stm32_timer.o [1]
 TimerSetTimeout          0x800'3aaf   0x2c  Code  Gb  stm32_timer.o [1]
 TimestampNow             0x800'5ec1   0x2a  Code  Lc  util_if.o [1]
-TxCpltCallback_LPUART1  0x2000'241c    0x4  Data  Lc  main.o [1]
-TxCpltCallback_USART1   0x2000'2414    0x4  Data  Lc  main.o [1]
-TxCpltCallback_USART2   0x2000'2418    0x4  Data  Lc  main.o [1]
-TxDoneParams            0x2000'240c    0x4  Data  Gb  LoRaMac.o [1]
+TxCpltCallback_LPUART1  0x2000'2418    0x4  Data  Lc  main.o [1]
+TxCpltCallback_USART1   0x2000'2410    0x4  Data  Lc  main.o [1]
+TxCpltCallback_USART2   0x2000'2414    0x4  Data  Lc  main.o [1]
+TxDoneParams            0x2000'2408    0x4  Data  Gb  LoRaMac.o [1]
 TxLedTimer              0x2000'22a8   0x18  Data  Lc  app.o [1]
 TxParams                0x2000'22f0   0x18  Data  Lc  LmHandler.o [1]
 TxTimeoutTimer          0x2000'1dd0   0x18  Data  Gb  radio.o [1]
 TxTimer                 0x2000'2290   0x18  Data  Lc  app.o [1]
 UARTEx_SetNbDataToProcess
-                         0x801'4425   0x3e  Code  Lc  stm32wlxx_hal_uart_ex.o [1]
+                         0x801'4419   0x3e  Code  Lc  stm32wlxx_hal_uart_ex.o [1]
 UARTEx_SetNbDataToProcess::denominator
-                         0x801'446c    0x8  Data  Lc  stm32wlxx_hal_uart_ex.o [1]
+                         0x801'4460    0x8  Data  Lc  stm32wlxx_hal_uart_ex.o [1]
 UARTEx_SetNbDataToProcess::numerator
-                         0x801'4464    0x8  Data  Lc  stm32wlxx_hal_uart_ex.o [1]
+                         0x801'4458    0x8  Data  Lc  stm32wlxx_hal_uart_ex.o [1]
 UARTPrescTable           0x801'2e10   0x18  Data  Gb  stm32wlxx_hal_uart.o [1]
 UART_AdvFeatureConfig    0x801'2a9d   0xc6  Code  Gb  stm32wlxx_hal_uart.o [1]
 UART_CheckIdleState      0x801'2b63   0x5c  Code  Gb  stm32wlxx_hal_uart.o [1]
@@ -1985,12 +1985,12 @@ UTIL_LPM_SetOffMode      0x800'c3bf    0xe  Code  Gb  stm32_lpm.o [1]
 UTIL_LPM_SetStopMode     0x800'c3af   0x10  Code  Gb  stm32_lpm.o [1]
 UTIL_MEM_cpy_8           0x800'5c1d   0x16  Code  Gb  stm32_mem.o [1]
 UTIL_MEM_set_8           0x800'5c33    0xe  Code  Gb  stm32_mem.o [1]
-UTIL_PowerDriver         0x801'6050   0x18  Data  Gb  stm32_lpm_if.o [1]
+UTIL_PowerDriver         0x801'6044   0x18  Data  Gb  stm32_lpm_if.o [1]
 UTIL_SEQ_Idle            0x800'5ebd    0x4  Code  Gb  util_if.o [1]
-UTIL_SEQ_RegTask         0x801'42f5   0x1a  Code  Gb  stm32_seq.o [1]
-UTIL_SEQ_Run             0x801'422d   0xc8  Code  Gb  stm32_seq.o [1]
-UTIL_SEQ_SetTask         0x801'430f   0x20  Code  Gb  stm32_seq.o [1]
-UTIL_SYSTIMDriver        0x801'607c   0x14  Data  Gb  timer_if.o [1]
+UTIL_SEQ_RegTask         0x801'42e9   0x1a  Code  Gb  stm32_seq.o [1]
+UTIL_SEQ_Run             0x801'4221   0xc8  Code  Gb  stm32_seq.o [1]
+UTIL_SEQ_SetTask         0x801'4303   0x20  Code  Gb  stm32_seq.o [1]
+UTIL_SYSTIMDriver        0x801'6070   0x14  Data  Gb  timer_if.o [1]
 UTIL_TIMER_Create        0x800'38c5   0x32  Code  Gb  stm32_timer.o [1]
 UTIL_TIMER_GetCurrentTime
                          0x800'3a6d   0x10  Code  Gb  stm32_timer.o [1]
@@ -2001,8 +2001,8 @@ UTIL_TIMER_Init          0x800'38b9    0xc  Code  Gb  stm32_timer.o [1]
 UTIL_TIMER_SetPeriod     0x800'39c3   0x2e  Code  Gb  stm32_timer.o [1]
 UTIL_TIMER_Start         0x800'38f7   0x70  Code  Gb  stm32_timer.o [1]
 UTIL_TIMER_Stop          0x800'396d   0x56  Code  Gb  stm32_timer.o [1]
-UTIL_TimerDriver         0x801'5e08   0x2c  Data  Gb  timer_if.o [1]
-UTIL_TraceDriver         0x801'6110   0x10  Data  Gb  usart_if.o [1]
+UTIL_TimerDriver         0x801'5dfc   0x2c  Data  Gb  timer_if.o [1]
+UTIL_TraceDriver         0x801'6104   0x10  Data  Gb  usart_if.o [1]
 UpdateRxSlotIdleState    0x800'029b   0x24  Code  Lc  LoRaMac.o [1]
 UsageFault_Handler       0x800'f92f    0x8  Code  Gb  stm32wlxx_it.o [1]
 ValidatePayloadLength    0x800'136d   0x42  Code  Lc  LoRaMac.o [1]
@@ -2020,9 +2020,9 @@ __NVIC_SetPriority       0x800'faad   0x1a  Code  Lc  stm32wlxx_hal_cortex.o [1]
 __NVIC_SystemReset       0x800'f8d5   0x1a  Code  Lc  stm32wlxx_it.o [1]
 __aeabi_d2iz             0x800'cd2d         Code  Gb  DblToS32.o [3]
 __aeabi_f2d              0x800'cc8d         Code  Gb  FltToDbl.o [3]
-__aeabi_f2iz             0x801'50fd         Code  Gb  FltToS32.o [3]
-__aeabi_fdiv             0x801'5001         Code  Gb  FltDiv.o [3]
-__aeabi_fmul             0x801'4f29         Code  Gb  FltMul.o [3]
+__aeabi_f2iz             0x801'50f1         Code  Gb  FltToS32.o [3]
+__aeabi_fdiv             0x801'4ff5         Code  Gb  FltDiv.o [3]
+__aeabi_fmul             0x801'4f1d         Code  Gb  FltMul.o [3]
 __aeabi_fsub             0x800'cc0d         Code  Gb  FltSub.o [3]
 __aeabi_ldiv0            0x800'fcf5         Code  Gb  I64DivZer.o [4]
 __aeabi_memclr4          0x800'c389         Code  Gb  ABImemclr4.o [4]
@@ -2032,42 +2032,42 @@ __aeabi_memcpy8          0x800'58f1         Code  Gb  ABImemcpy.o [4]
 __aeabi_memset           0x800'5979         Code  Gb  ABImemset.o [4]
 __aeabi_ui2f             0x800'59e1         Code  Gb  U32ToFlt.o [3]
 __aeabi_uldivmod         0x800'ed49         Code  Gb  I64DivMod.o [4]
-__cmain                  0x801'5f85         Code  Gb  cmain.o [4]
-__exit                   0x801'5fb9   0x14  Code  Gb  exit.o [5]
+__cmain                  0x801'5f79         Code  Gb  cmain.o [4]
+__exit                   0x801'5fad   0x14  Code  Gb  exit.o [5]
 __iar_Memset             0x800'5979         Code  Gb  ABImemset.o [4]
 __iar_Memset4_word       0x800'cbd9         Code  Gb  ABImemset48.o [4]
 __iar_Memset8_word       0x800'cbd9         Code  Gb  ABImemset48.o [4]
 __iar_Memset_word        0x800'5981         Code  Gb  ABImemset.o [4]
-__iar_data_init3         0x801'5e5d   0x28  Code  Gb  data_init.o [4]
+__iar_data_init3         0x801'5e51   0x28  Code  Gb  data_init.o [4]
 __iar_fadd               0x800'cc19         Code  Gb  FltSub.o [3]
 __iar_floor64            0x800'ccd5         Code  Gb  floor.o [3]
 __iar_fsub               0x800'cd69         Code  Gb  FltAdd.o [3]
 __iar_fsubStart          0x800'cd79         Code  Gb  FltAdd.o [3]
 __iar_packbits_init_single3
-                         0x801'5d09   0x38  Code  Gb  packbits_init_single.o [4]
-__iar_program_start      0x801'6005         Code  Gb  cstartup_M.o [4]
+                         0x801'5cfd   0x38  Code  Gb  packbits_init_single.o [4]
+__iar_program_start      0x801'5ff9         Code  Gb  cstartup_M.o [4]
 __iar_small_strlen       0x800'c391         Code  Gb  strlen_small.o [4]
 __iar_zero_init3         0x800'4717   0x3a  Code  Gb  zero_init3.o [4]
-__low_level_init         0x801'5fa3    0x4  Code  Gb  low_level_init.o [2]
+__low_level_init         0x801'5f97    0x4  Code  Gb  low_level_init.o [2]
 __vector_table           0x800'0000         Data  Gb  startup_stm32wl55xx_cm4.o [1]
-_call_main               0x801'5f91         Code  Gb  cmain.o [4]
-_exit                    0x801'5fad         Code  Gb  cexit.o [4]
-_main                    0x801'5f9b         Code  Gb  cmain.o [4]
-buttonHeldAtBoot        0x2000'2430    0x1  Data  Gb  appinit.o [1]
+_call_main               0x801'5f85         Code  Gb  cmain.o [4]
+_exit                    0x801'5fa1         Code  Gb  cexit.o [4]
+_main                    0x801'5f8f         Code  Gb  cmain.o [4]
+buttonHeldAtBoot        0x2000'242c    0x1  Data  Gb  appinit.o [1]
 copy_and_key             0x800'bf7b   0x84  Code  Lc  lorawan_aes.o [1]
 copy_block               0x800'beb5   0x42  Code  Lc  lorawan_aes.o [1]
 dbgReceiveBuffer        0x2000'1388  0x1f4  Data  Gb  debug.o [1]
-dbgReceiveDrainIndex    0x2000'23fc    0x4  Data  Gb  debug.o [1]
-dbgReceiveFillIndex     0x2000'23f8    0x4  Data  Gb  debug.o [1]
-dbgReceiveOverrun       0x2000'2431    0x1  Data  Gb  debug.o [1]
+dbgReceiveDrainIndex    0x2000'23f8    0x4  Data  Gb  debug.o [1]
+dbgReceiveFillIndex     0x2000'23f4    0x4  Data  Gb  debug.o [1]
+dbgReceiveOverrun       0x2000'242d    0x1  Data  Gb  debug.o [1]
 dbgReceivedByteISR       0x801'176b   0x5e  Code  Gb  debug.o [1]
 dbgRestartReceive        0x801'174f   0x1c  Code  Gb  debug.o [1]
-dbgRxCallback           0x2000'2400    0x4  Data  Lc  debug.o [1]
-exit                     0x801'5fa7    0x4  Code  Gb  exit.o [2]
+dbgRxCallback           0x2000'23fc    0x4  Data  Lc  debug.o [1]
+exit                     0x801'5f9b    0x4  Code  Gb  exit.o [2]
 floor                    0x800'ccd5         Code  Gb  floor.o [3]
 floorl                   0x800'ccd5         Code  Gb  floor.o [3]
-gfm2_sbox                0x801'5428  0x100  Data  Lc  lorawan_aes.o [1]
-gfm3_sbox                0x801'5528  0x100  Data  Lc  lorawan_aes.o [1]
+gfm2_sbox                0x801'541c  0x100  Data  Lc  lorawan_aes.o [1]
+gfm3_sbox                0x801'551c  0x100  Data  Lc  lorawan_aes.o [1]
 hadc                    0x2000'1e80   0x64  Data  Gb  adc.o [1]
 hdma_i2c2_rx            0x2000'2068   0x60  Data  Gb  main.o [1]
 hdma_i2c2_tx            0x2000'20c8   0x60  Data  Gb  main.o [1]
@@ -2083,40 +2083,39 @@ hspi1                   0x2000'1ee4   0x64  Data  Gb  main.o [1]
 hsubghz                 0x2000'2388    0xc  Data  Gb  subghz.o [1]
 huart1                  0x2000'1be4   0xc8  Data  Gb  main.o [1]
 huart2                  0x2000'1cac   0xc8  Data  Gb  main.o [1]
-ioInit                   0x801'340d  0x24c  Code  Gb  appinit.o [1]
+ioInit                   0x801'3413  0x258  Code  Gb  appinit.o [1]
 ledIndicateJoinInProgress
-                         0x801'4ee1    0xa  Code  Gb  led.o [1]
+                         0x801'4ed5    0xa  Code  Gb  led.o [1]
 ledIndicateReceiveInProgress
-                         0x801'4f05   0x10  Code  Gb  led.o [1]
+                         0x801'4ef9   0x10  Code  Gb  led.o [1]
 ledIndicateTransmitInProgress
-                         0x801'4f19    0x8  Code  Gb  led.o [1]
-ledJoined                0x801'4eb5   0x22  Code  Gb  led.o [1]
-ledToggleJoin            0x801'4eeb   0x1a  Code  Gb  led.o [1]
+                         0x801'4f0d    0x8  Code  Gb  led.o [1]
+ledJoined                0x801'4ea9   0x22  Code  Gb  led.o [1]
+ledToggleJoin            0x801'4edf   0x1a  Code  Gb  led.o [1]
 loraInfo                0x2000'2368   0x10  Data  Lc  lora_info.o [1]
 lorawan_aes_encrypt      0x800'c0e5  0x29a  Code  Gb  lorawan_aes.o [1]
 lorawan_aes_set_key      0x800'bfff   0xe6  Code  Gb  lorawan_aes.o [1]
-main                     0x801'39d7   0x40  Code  Gb  main.o [1]
+main                     0x801'39c7   0x40  Code  Gb  main.o [1]
 memcpy1                  0x800'5651   0x16  Code  Gb  utilities.o [1]
 memcpyr                  0x800'5667   0x1a  Code  Gb  utilities.o [1]
 memset                   0x800'5c09   0x14  Code  Gb  memset.o [4]
 memset1                  0x800'5681    0xe  Code  Gb  utilities.o [1]
 next                    0x2000'0148    0x4  Data  Lc  utilities.o [1]
-peripherals             0x2000'2420    0x4  Data  Gb  main.o [1]
-radioBand               0x2000'23f4    0x4  Data  Gb  appinit.o [1]
+peripherals             0x2000'241c    0x4  Data  Gb  main.o [1]
 randr                    0x800'561f   0x32  Code  Gb  utilities.o [1]
-sbox                     0x801'5628  0x100  Data  Lc  lorawan_aes.o [1]
+sbox                     0x801'561c  0x100  Data  Lc  lorawan_aes.o [1]
 srand1                   0x800'5619    0x6  Code  Gb  utilities.o [1]
 sztmp                   0x2000'1188  0x200  Data  Lc  stm32_adv_trace.o [1]
 tiny_snprintf_like       0x800'5ef7    0xe  Code  Lc  util_if.o [1]
 tiny_vsnprintf_like      0x800'5c41  0x242  Code  Gb  stm32_tiny_vsnprintf.o [1]
-tristate                 0x801'332f   0xde  Code  Gb  appinit.o [1]
+tristate                 0x801'3335   0xde  Code  Gb  appinit.o [1]
 uwTick                  0x2000'013c    0x4  Data  Gb  stm32wlxx_hal.o [1]
 uwTickFreq              0x2000'0138    0x1  Data  Gb  stm32wlxx_hal.o [1]
 uwTickPrio              0x2000'0140    0x4  Data  Gb  stm32wlxx_hal.o [1]
-vcom_DeInit              0x801'5c63    0xa  Code  Gb  usart_if.o [1]
-vcom_Init                0x801'5c51   0x12  Code  Gb  usart_if.o [1]
-vcom_ReceiveInit         0x801'5c83    0xe  Code  Gb  usart_if.o [1]
-vcom_Trace_DMA           0x801'5c6d   0x16  Code  Gb  usart_if.o [1]
+vcom_DeInit              0x801'5c57    0xa  Code  Gb  usart_if.o [1]
+vcom_Init                0x801'5c45   0x12  Code  Gb  usart_if.o [1]
+vcom_ReceiveInit         0x801'5c77    0xe  Code  Gb  usart_if.o [1]
+vcom_Trace_DMA           0x801'5c61   0x16  Code  Gb  usart_if.o [1]
 vector_t                0x2000'1600  0x138  Data  Lc  main.o [1]
 xor_block                0x800'bef7   0x84  Code  Lc  lorawan_aes.o [1]
 
@@ -2127,9 +2126,9 @@ xor_block                0x800'bef7   0x84  Code  Lc  lorawan_aes.o [1]
 [4] = rt7M_tl.a
 [5] = shb_l.a
 
-  87'608 bytes of readonly  code memory
-   3'205 bytes of readonly  data memory
-  11'314 bytes of readwrite data memory
+  87'596 bytes of readonly  code memory
+   3'206 bytes of readonly  data memory
+  11'311 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

@@ -1,0 +1,6 @@
+util_if.c:74:13:tiny_snprintf_like	16	static
+util_if.c:54:13:TimestampNow	32	static
+util_if.c:19:6:MX_UTIL_Init	8	static
+util_if.c:46:6:UTIL_SEQ_Idle	8	static
+util_if.c:62:6:UTIL_ADV_TRACE_PreSendHook	8	static
+util_if.c:68:6:UTIL_ADV_TRACE_PostSendHook	8	static
