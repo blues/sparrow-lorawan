@@ -52,16 +52,16 @@ bool MX_DBG_Active()
 // Output a message to the console, a line at a time because
 // the STM32CubeIDE doesn't recognize \n as doing an implicit
 // carriage return.
-void MX_DBG(const char *message, size_t length)
+void MX_DBG(const char *message, size_t length, uint32_t timeout)
 {
 
     // Output on the appropriate port
 #if (DEBUGGER_ON_USART2||DEBUGGER_ON_LPUART1)
 #if DEBUGGER_ON_USART2
-    MX_USART2_UART_Transmit((uint8_t *)message, length, 0);
+    MX_USART2_UART_Transmit((uint8_t *)message, length, timeout);
 #endif
 #if DEBUGGER_ON_LPUART1
-    MX_LPUART1_UART_Transmit((uint8_t *)message, length, 0);
+    MX_LPUART1_UART_Transmit((uint8_t *)message, length, timeout);
 #endif
 #endif
 

@@ -252,13 +252,13 @@ void MX_UART_TxCpltCallback(UART_HandleTypeDef *huart, void (*cb)(void *))
 // Transmit complete callback for serial ports
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
-    if (huart == &huart1) {
+    if (huart == &huart1 && TxCpltCallback_USART1 != NULL) {
         TxCpltCallback_USART1(huart);
     } 
-    if (huart == &huart2) {
+    if (huart == &huart2 && TxCpltCallback_USART2 != NULL) {
         TxCpltCallback_USART2(huart);
     } 
-    if (huart == &hlpuart1) {
+    if (huart == &hlpuart1 && TxCpltCallback_LPUART1 != NULL) {
         TxCpltCallback_LPUART1(huart);
     } 
 }

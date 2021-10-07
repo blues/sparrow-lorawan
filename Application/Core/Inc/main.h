@@ -23,7 +23,7 @@ void MX_DBG_Init(void);
 void MX_DBG_DeInit(void);
 void MX_DBG_Suspend(void);
 void MX_DBG_Resume(void);
-void MX_DBG(const char *msg, size_t len);
+void MX_DBG(const char *message, size_t length, uint32_t timeout);
 void MX_DBG_RxCallback(void (*cb)(uint8_t *rxChar, uint16_t size, uint8_t error));
 void MX_DBG_Disable(void);
 void MX_DBG_Enable(void);
