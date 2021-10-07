@@ -3,7 +3,7 @@
 // copyright holder including that found in the LICENSE file.
 
 #include "stdint.h"
-#include "sys_conf.h"
+#include "config_sys.h"
 #include "sys_sensors.h"
 
 #define STSOP_LATTITUDE           ((float) 43.618622 )  /*!< default latitude position */

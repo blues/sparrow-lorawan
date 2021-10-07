@@ -2,6 +2,7 @@
 // Use of this source code is governed by licenses granted by the
 // copyright holder including that found in the LICENSE file.
 
+#include "main.h"
 #include "LoRaMac.h"
 #include "lora_info.h"
 #include "sys_app.h" // APP_PRINTF
@@ -49,11 +50,7 @@ void LoraInfo_Init(void)
 #endif
 
     if (loraInfo.Region == 0) {
-        APP_PRINTF("error: At least one region shall be defined in the MW: check lorawan_conf.h \r\n");
-        while (1 != UTIL_ADV_TRACE_IsBufferEmpty()) {
-            // Wait that all printfs are completed
-        }
-        while (1) {}
+        Error_Handler();
     }
 
 #if ( LORAMAC_CLASSB_ENABLED == 1 )

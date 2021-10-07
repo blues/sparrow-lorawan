@@ -30,7 +30,7 @@ typedef enum {
 // Each Id shall be in the range 0..31
 typedef enum {
     CFG_SEQ_Task_LmHandlerProcess,
-    CFG_SEQ_Task_LoRaSendOnTxTimerOrButtonEvent,
+    CFG_SEQ_Task_LoRaSendOnTxTimer,
     CFG_SEQ_Task_NBR
 } CFG_SEQ_Task_Id_t;
 

@@ -1431,73 +1431,124 @@
         <group>
             <name>User</name>
             <group>
-                <name>Core</name>
+                <name>App</name>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\adc.c</name>
+                    <name>$PROJ_DIR$\..\App\app.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\adc_if.c</name>
+                    <name>$PROJ_DIR$\..\App\appinit.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\dma.c</name>
+                    <name>$PROJ_DIR$\..\App\led.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\main.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\rtc.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\stm32_lpm_if.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\stm32wlxx_hal_msp.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\stm32wlxx_it.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\subghz.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\sys_app.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\sys_debug.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\sys_sensors.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\timer_if.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\usart.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\usart_if.c</name>
+                    <name>$PROJ_DIR$\..\App\lora_info.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
                 </file>
             </group>
             <group>
-                <name>Application</name>
-                <group>
-                    <name>App</name>
-                    <file>
-                        <name>$PROJ_DIR$\..\App\app_lorawan.c</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\App\lora_app.c</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\App\lora_info.c</name>
-                    </file>
-                </group>
+                <name>Core</name>
                 <group>
                     <name>Radio</name>
                     <file>
                         <name>$PROJ_DIR$\..\Core\Radio\radio_board_if.c</name>
+                        <configuration>
+                            <name>sparrow</name>
+                        </configuration>
                     </file>
                 </group>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\adc.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\adc_if.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\debug.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\main.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\rtc.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\stm32_lpm_if.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\stm32wlxx_hal_msp.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\stm32wlxx_it.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\strl.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\subghz.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\sys_app.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\sys_sensors.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\timer_if.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\usart_if.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\util_if.c</name>
+                </file>
             </group>
         </group>
     </group>
@@ -1509,18 +1560,6 @@
     </group>
     <group>
         <name>Drivers</name>
-        <group>
-            <name>BSP</name>
-            <group>
-                <name>STM32WLxx_Nucleo</name>
-                <file>
-                    <name>$PROJ_DIR$\..\..\Drivers\BSP\STM32WLxx_Nucleo\stm32wlxx_nucleo.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\..\Drivers\BSP\STM32WLxx_Nucleo\stm32wlxx_nucleo_radio.c</name>
-                </file>
-            </group>
-        </group>
         <group>
             <name>CMSIS</name>
             <file>
@@ -1560,6 +1599,12 @@
                 <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_gpio.c</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_i2c.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_i2c_ex.c</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_pwr.c</name>
             </file>
             <file>
@@ -1572,10 +1617,22 @@
                 <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rcc_ex.c</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rng.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rng_ex.c</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rtc.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rtc_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_spi.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_spi_ex.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_subghz.c</name>
@@ -1606,6 +1663,9 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\LmHandler.c</name>
+                <configuration>
+                    <name>sparrow</name>
+                </configuration>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\Packages\LmhpCompliance.c</name>
@@ -1703,6 +1763,9 @@
         <name>Utilities</name>
         <file>
             <name>$PROJ_DIR$\..\..\Utilities\trace\adv_trace\stm32_adv_trace.c</name>
+            <configuration>
+                <name>sparrow</name>
+            </configuration>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\Utilities\lpm\tiny_lpm\stm32_lpm.c</name>

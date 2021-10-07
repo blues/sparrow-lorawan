@@ -141,7 +141,6 @@ In order to make the program work, you must do the following :
   - UART Config = 115200, 8b, 1 stopbit, no parity, no flow control
 
 @par How to debug ?
-  - make sure the flag DEBUGGER_ENABLED to 1 in sys_conf.h
   - simpler to define the flag LOW_POWER_DISABLE to 1 as well
   - compile, download and attach
 

@@ -5,7 +5,6 @@
 #pragma once
 
 #include "adc.h"
-#include "platform.h"
 
 // Battery level in mV
 #define BAT_CR2032                  ((uint32_t) 3000)
