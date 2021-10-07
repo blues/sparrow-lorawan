@@ -1,4 +1,0 @@
-appinit.c:41:6:MX_AppISR	0	static
-appinit.c:49:5:tristate	56	static
-appinit.c:82:6:ioInit	48	static
-appinit.c:23:6:MX_AppMain	8	static
