@@ -93,6 +93,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/App/appinit.c</locationURI>
 		</link>
 		<link>
+			<name>Application/App/bin.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/App/bin.c</locationURI>
+		</link>
+		<link>
 			<name>Application/App/led.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/App/led.c</locationURI>
@@ -101,6 +106,11 @@
 			<name>Application/App/lora_info.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/App/lora_info.c</locationURI>
+		</link>
+		<link>
+			<name>Application/App/sensor.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/App/sensor.c</locationURI>
 		</link>
 		<link>
 			<name>Application/Core/adc.c</name>
@@ -161,11 +171,6 @@
 			<name>Application/Core/sys_app.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/sys_app.c</locationURI>
-		</link>
-		<link>
-			<name>Application/Core/sys_sensors.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/sys_sensors.c</locationURI>
 		</link>
 		<link>
 			<name>Application/Core/timer_if.c</name>

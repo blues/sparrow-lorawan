@@ -1445,10 +1445,19 @@
                     </configuration>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\App\bin.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\App\led.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\App\lora_info.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\App\sensor.c</name>
                     <configuration>
                         <name>sparrow</name>
                     </configuration>
@@ -1524,12 +1533,6 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\sys_app.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\sys_sensors.c</name>
                     <configuration>
                         <name>sparrow</name>
                     </configuration>
@@ -1672,6 +1675,9 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMac.c</name>
+                <configuration>
+                    <name>sparrow</name>
+                </configuration>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacAdr.c</name>

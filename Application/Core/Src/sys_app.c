@@ -10,31 +10,19 @@
 #include "timer_if.h"
 #include "utilities_def.h"
 #include "main.h"
-#include "sys_sensors.h"
-
-// Maximum battery level
-#define LORAWAN_MAX_BAT   254
 
 // Init SystemApp subsystem
 void SystemApp_Init(void)
 {
-
-    // Initialize the temperature and Battery measurement services
     SYS_InitMeasurement();
-
-    // Initialize the Sensors
-    EnvSensors_Init();
-
 }
 
-// get battery voltage
+// Get battery voltage in a way required by LoRaWAN
+#define LORAWAN_MAX_BAT   254
 uint8_t GetBatteryLevel(void)
 {
     uint8_t batteryLevel = 0;
-    uint16_t batteryLevelmV;
-
-    batteryLevelmV = (uint16_t) SYS_GetBatteryLevel();
-
+    uint16_t batteryLevelmV = (uint16_t) SYS_GetBatteryLevel();
     // Convert battery level from mV to linear scale: 1 (very low) to 254 (fully charged)
     if (batteryLevelmV > VDD_BAT) {
         batteryLevel = LORAWAN_MAX_BAT;
@@ -43,11 +31,10 @@ uint8_t GetBatteryLevel(void)
     } else {
         batteryLevel = (((uint32_t)(batteryLevelmV - VDD_MIN) * LORAWAN_MAX_BAT) / (VDD_BAT - VDD_MIN));
     }
-
     return batteryLevel;  // 1 (very low) to 254 (fully charged)
 }
 
-// get temp
+// Get temperature in a way required by LoRaWAN
 uint16_t GetTemperatureLevel(void)
 {
     uint16_t temperatureLevel = 0;
@@ -55,7 +42,7 @@ uint16_t GetTemperatureLevel(void)
     return temperatureLevel;
 }
 
-//
+// Get a unique device ID
 void GetUniqueId(uint8_t *id)
 {
     uint32_t val = 0;
@@ -63,7 +50,6 @@ void GetUniqueId(uint8_t *id)
     if (val == 0xFFFFFFFF) { // Normally this should not happen
         uint32_t ID_1_3_val = HAL_GetUIDw0() + HAL_GetUIDw2();
         uint32_t ID_2_val = HAL_GetUIDw1();
-
         id[7] = (ID_1_3_val) >> 24;
         id[6] = (ID_1_3_val) >> 16;
         id[5] = (ID_1_3_val) >> 8;
@@ -72,7 +58,7 @@ void GetUniqueId(uint8_t *id)
         id[2] = (ID_2_val) >> 16;
         id[1] = (ID_2_val) >> 8;
         id[0] = (ID_2_val);
-    } else { // Typical use case
+    } else {                // Expected
         id[7] = val & 0xFF;
         id[6] = (val >> 8) & 0xFF;
         id[5] = (val >> 16) & 0xFF;
@@ -84,21 +70,17 @@ void GetUniqueId(uint8_t *id)
         id[1] = (val >> 8) & 0xFF;
         id[0] = (val >> 16) & 0xFF;
     }
-
 }
 
 // Get the device address
 uint32_t GetDevAddr(void)
 {
     uint32_t val = 0;
-
     val = LL_FLASH_GetUDN();
     if (val == 0xFFFFFFFF) {
         val = ((HAL_GetUIDw0()) ^ (HAL_GetUIDw1()) ^ (HAL_GetUIDw2()));
     }
-
     return val;
-
 }
 
 // HAL overrides for tick handling

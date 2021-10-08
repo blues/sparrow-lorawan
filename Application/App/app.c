@@ -16,9 +16,12 @@
 #include "LmHandler.h"
 #include "stm32_lpm.h"
 #include "config_sys.h"
-#include "sys_sensors.h"
 #include "app.h"
 #include "adc_if.h"
+
+// Sensor timers
+static uint32_t sensorSecsSuccess = 10;
+static uint32_t sensorSecsFailure = 10;
 
 // Forwards
 void App_Init(LoRaMacRegion_t selectedRegion);
@@ -31,6 +34,8 @@ static void OnMacProcessNotify(void);
 static void OnTxTimerLedEvent(void *context);
 static void OnRxTimerLedEvent(void *context);
 static void OnJoinTimerLedEvent(void *context);
+void startSensorTimer(bool success);
+
 
 // Private vars
 static ActivationType_t ActivationType = LORAWAN_DEFAULT_ACTIVATION_TYPE;
@@ -118,11 +123,20 @@ void App_Init(LoRaMacRegion_t selectedRegion)
 
     LmHandlerJoin(ActivationType);
 
-    // send every time timer elapses
+    // Schedule the first sensor transmit
     UTIL_TIMER_Create(&TxTimer, 0xFFFFFFFFU, UTIL_TIMER_ONESHOT, OnTxTimerEvent, NULL);
-    UTIL_TIMER_SetPeriod(&TxTimer, APP_TX_DUTYCYCLE);
-    UTIL_TIMER_Start(&TxTimer);
+    startSensorTimer(false);
 
+}
+
+// Schedule the next transmit timer wakeup
+void startSensorTimer(bool success)
+{
+    uint32_t seconds = success ? sensorSecsSuccess : sensorSecsFailure;
+    APP_PRINTF("sensor will next be sampled in %d seconds\r\n", seconds);
+    UTIL_TIMER_Stop(&TxTimer);
+    UTIL_TIMER_SetPeriod(&TxTimer, seconds * 1000);
+    UTIL_TIMER_Start(&TxTimer);
 }
 
 // callback when LoRa application has received a frame
@@ -141,6 +155,7 @@ static void OnRxData(LmHandlerAppData_t *appData, LmHandlerRxParams_t *params)
         APP_LOG(TS_OFF, VLEVEL_M, "\r\n###### ========== MCPS-Indication ==========\r\n");
         APP_LOG(TS_OFF, VLEVEL_H, "###### D/L FRAME:%04d | SLOT:%s | PORT:%d | DR:%d | RSSI:%d | SNR:%d\r\n",
                 params->DownlinkCounter, slotStrings[params->RxSlot], appData->Port, params->Datarate, params->Rssi, params->Snr);
+        APP_LOG(TS_OFF, VLEVEL_M, "\r\n");
         switch (appData->Port) {
         case LORAWAN_SWITCH_CLASS_PORT:
             // this port switches the class
@@ -178,60 +193,26 @@ static void OnRxData(LmHandlerAppData_t *appData, LmHandlerRxParams_t *params)
 static void SendTxData(void)
 {
 
-    uint16_t pressure = 0;
-    int16_t temperature = 0;
-    sensor_t sensor_data;
-    UTIL_TIMER_Time_t nextTxIn = 0;
-
-    uint16_t humidity = 0;
-    uint32_t i = 0;
-    int32_t latitude = 0;
-    int32_t longitude = 0;
-    uint16_t altitudeGps = 0;
-
-    EnvSensors_Read(&sensor_data);
-    temperature = (SYS_GetTemperatureLevel() >> 8);
-    pressure    = (uint16_t)(sensor_data.pressure * 100 / 10);      /* in hPa / 10 */
-
-    AppData.Port = LORAWAN_USER_APP_PORT;
-
-    humidity    = (uint16_t)(sensor_data.humidity * 10);            /* in %*10     */
-
-    AppData.Buffer[i++] = 0; // LED state
-    AppData.Buffer[i++] = (uint8_t)((pressure >> 8) & 0xFF);
-    AppData.Buffer[i++] = (uint8_t)(pressure & 0xFF);
-    AppData.Buffer[i++] = (uint8_t)(temperature & 0xFF);
-    AppData.Buffer[i++] = (uint8_t)((humidity >> 8) & 0xFF);
-    AppData.Buffer[i++] = (uint8_t)(humidity & 0xFF);
-
-    if ((LmHandlerParams.ActiveRegion == LORAMAC_REGION_US915) || (LmHandlerParams.ActiveRegion == LORAMAC_REGION_AU915)
-            || (LmHandlerParams.ActiveRegion == LORAMAC_REGION_AS923)) {
-        AppData.Buffer[i++] = 0;
-        AppData.Buffer[i++] = 0;
-        AppData.Buffer[i++] = 0;
-        AppData.Buffer[i++] = 0;
-    } else {
-        latitude = sensor_data.latitude;
-        longitude = sensor_data.longitude;
-
-        AppData.Buffer[i++] = GetBatteryLevel();        /* 1 (very low) to 254 (fully charged) */
-        AppData.Buffer[i++] = (uint8_t)((latitude >> 16) & 0xFF);
-        AppData.Buffer[i++] = (uint8_t)((latitude >> 8) & 0xFF);
-        AppData.Buffer[i++] = (uint8_t)(latitude & 0xFF);
-        AppData.Buffer[i++] = (uint8_t)((longitude >> 16) & 0xFF);
-        AppData.Buffer[i++] = (uint8_t)((longitude >> 8) & 0xFF);
-        AppData.Buffer[i++] = (uint8_t)(longitude & 0xFF);
-        AppData.Buffer[i++] = (uint8_t)((altitudeGps >> 8) & 0xFF);
-        AppData.Buffer[i++] = (uint8_t)(altitudeGps & 0xFF);
+    // Get sensor data to be transmitted
+    bool success = sensorGetData(AppDataBuffer, sizeof(AppDataBuffer), &AppData.BufferSize, &sensorSecsSuccess, &sensorSecsFailure);
+    if (!success || AppData.BufferSize == 0) {
+        startSensorTimer(false);
+        return;
     }
 
-    AppData.BufferSize = i;
+    // Set the transmit port for the app data
+    AppData.Port = LORAWAN_USER_APP_PORT;
 
+    // Send the data
+    UTIL_TIMER_Time_t nextTxIn = 0;
     if (LORAMAC_HANDLER_SUCCESS == LmHandlerSend(&AppData, LORAWAN_DEFAULT_CONFIRMED_MSG_STATE, &nextTxIn, false)) {
         APP_LOG(TS_ON, VLEVEL_L, "SEND REQUEST\r\n");
     } else if (nextTxIn > 0) {
         APP_LOG(TS_ON, VLEVEL_L, "Next Tx in  : ~%d second(s)\r\n", (nextTxIn / 1000));
     }
+
+    // Start a timer for the next transmit, assuming success
+    startSensorTimer(true);
 
 }
 
@@ -240,8 +221,6 @@ static void SendTxData(void)
 static void OnTxTimerEvent(void *context)
 {
     UTIL_SEQ_SetTask((1 << CFG_SEQ_Task_LoRaSendOnTxTimer), CFG_SEQ_Prio_0);
-    // Wait for next tx slot
-    UTIL_TIMER_Start(&TxTimer);
 }
 
 // LED Tx timer callback function
@@ -285,6 +264,8 @@ static void OnTxData(LmHandlerTxParams_t *params)
             } else {
                 APP_LOG(TS_OFF, VLEVEL_H, "UNCONFIRMED\r\n");
             }
+
+            APP_LOG(TS_OFF, VLEVEL_M, "\r\n");
         }
     }
 }
@@ -306,6 +287,8 @@ static void OnJoinRequest(LmHandlerJoinParams_t *joinParams)
             }
         } else {
             APP_LOG(TS_OFF, VLEVEL_M, "\r\n###### = JOIN FAILED\r\n");
+            startSensorTimer(false);
+            APP_LOG(TS_OFF, VLEVEL_M, "\r\n");
         }
     }
 }
