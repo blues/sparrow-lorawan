@@ -5,471 +5,775 @@
     <configuration>
         <name>sparrow</name>
         <outputs>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacCommands.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_adc.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionEU433.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_dma_ex.__cstat.et</file>
-            <file>$PROJ_DIR$\..\Core\Inc\timer_if.h</file>
-            <file>$PROJ_DIR$\..\Core\Inc\stm32_lpm_if.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_adc_ex.__cstat.et</file>
-            <file>$PROJ_DIR$\..\Core\Inc\rtc.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacCrypto.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_exti.h</file>
-            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-            <file>$PROJ_DIR$\sparrow\Obj\sensor.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\strl.o</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\radio.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionAU915.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rtc.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassB.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Include\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\..\Core\Src\strl.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\stm32wlxx_it.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_dma.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rtc_ex.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rcc_ex.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_i2c.c</file>
+            <file>$PROJ_DIR$\..\Sensor\sensor.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\system_stm32wlxx.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_i2c_ex.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_flash.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_cortex.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_pwr_ex.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\util_if.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_adc_ex.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_flash_ex.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\usart_if.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\sys_app.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\subghz.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_gpio.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_pwr.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rng_ex.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_dma_ex.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rcc.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rng.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rtc.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_exti.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_spi.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_spi_ex.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_adc.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_subghz.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\timer_if.c</file>
+            <file>$PROJ_DIR$\..\App\app.c</file>
+            <file>$PROJ_DIR$\..\App\appinit.c</file>
+            <file>$PROJ_DIR$\..\App\led.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\main.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\adc_if.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\rtc.c</file>
+            <file>$PROJ_DIR$\..\Core\Radio\radio_board_if.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\adc.c</file>
+            <file>$PROJ_DIR$\..\App\lora_info.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\debug.c</file>
+            <file>$PROJ_DIR$\startup_stm32wl55xx_cm4.s</file>
+            <file>$PROJ_DIR$\..\Core\Src\stm32_lpm_if.c</file>
+            <file>$PROJ_DIR$\..\Core\Src\stm32wlxx_hal_msp.c</file>
+            <file>$PROJ_DIR$\..\App\bin.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\..\..\Utilities\lpm\tiny_lpm\stm32_lpm.h</file>
+            <file>$PROJ_DIR$\sparrow\List\sparrow.map</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_rtc.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_exti.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\radio.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\cmac.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Include\cmsis_compiler.h</file>
             <file>$PROJ_DIR$\..\Core\Inc\utilities_def.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_seq.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\utilities.__cstat.et</file>
             <file>$PROJ_DIR$\..\Core\Inc\adc_if.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\radio.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\RegionKR920.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Utilities\lpm\tiny_lpm\stm32_lpm.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\startup_stm32wl55xx_cm4.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_dma_ex.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\LoRaMacCrypto.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\startup_stm32wl55xx_cm4.o</file>
             <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\Packages\LmhPackage.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\adc_if.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_spi.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_i2c_ex.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\cmac.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Include\cmsis_compiler.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_seq.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_tim.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_pwr_ex.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\lorawan_aes.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rng.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_i2c_ex.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_spi.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\appinit.o</file>
-            <file>$PROJ_DIR$\sparrow\List\sparrow.map</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rng.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\RegionCN779.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\Utilities\timer\stm32_timer.h</file>
             <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Include\cmsis_version.h</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_rtc.h</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_flash.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_exti.o</file>
-            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Device\ST\STM32WLxx\Include\stm32wlxx.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\cmac.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_i2c.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCryptoNvm.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\sys_app.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\subghz.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rcc.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacParser.o</file>
-            <file>$PROJ_DIR$\sparrow\Exe\sparrow.hex</file>
-            <file>$PROJ_DIR$\sparrow\Obj\led.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_system.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacSerializer.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionEU868.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionAU915.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionCN779.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_pwr.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\NvmDataMgmt.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacConfirmQueue.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacAdr.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Device\ST\STM32WLxx\Include\stm32wl55xx.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_adv_trace.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_exti.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionEU868.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_i2c.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\sys_app.o</file>
             <file>$TOOLKIT_DIR$\inc\c\time32.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\soft-se.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\usart_if.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rcc.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionAU915.o</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCryptoNvm.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\NvmDataMgmt.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32_tiny_sscanf.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Exe\sparrow.hex</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacParser.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\soft-se.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacSerializer.o</file>
             <file>$PROJ_DIR$\..\Core\Inc\sys_app.h</file>
             <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_tiny_sscanf.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\usart_if.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\subghz.__cstat.et</file>
             <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\led.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_system.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\radio_fw.o</file>
+            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Device\ST\STM32WLxx\Include\stm32wlxx.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\cmac.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_pwr.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionCN779.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacAdr.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacConfirmQueue.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Device\ST\STM32WLxx\Include\stm32wl55xx.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_adv_trace.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\subghz_phy_version.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_driver.h</file>
             <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\LmHandlerTypes.h</file>
-            <file>$PROJ_DIR$\..\Core\Inc\adc.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\sensor.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\debug.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacSerializer.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_adc.h</file>
-            <file>$PROJ_DIR$\..\Core\Radio\mw_log_conf.h</file>
-            <file>$PROJ_DIR$\..\Core\Radio\timer.h</file>
             <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionUS915.h</file>
-            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_mem.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_cortex.__cstat.et</file>
             <file>$TOOLKIT_DIR$\inc\c\string.h</file>
             <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Utilities\utilities.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_lpm_if.o</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\subghz_phy_version.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\main.o</file>
-            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_tiny_vsnprintf.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\debug.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Core\Radio\mw_log_conf.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacSerializer.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_lpm_if.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\RegionBaseUS.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\usart_if.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_seq.o</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_driver.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_i2c_ex.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rcc_ex.h</file>
+            <file>$PROJ_DIR$\..\Core\Inc\adc.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\lora_info.o</file>
-            <file>$PROJ_DIR$\..\App\lora_info.h</file>
+            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_tiny_vsnprintf.h</file>
+            <file>$PROJ_DIR$\..\Core\Radio\timer.h</file>
             <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Include\mpu_armv7.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\RegionRU864.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\sensor.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\usart_if.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_seq.o</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_adc.h</file>
+            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_mem.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_cortex.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_i2c_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\..\App\lora_info.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32_lpm_if.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rtc_ex.o</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rcc_ex.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\timer_if.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_i2c_ex.o</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\lorawan_aes.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\appinit.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_dmamux.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\sys_app.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_adc_ex.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassBNvm.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacMessageTypes.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionRU864.o</file>
-            <file>$PROJ_DIR$\..\config.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionEU868.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_pwr.o</file>
-            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_tiny_sscanf.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rtc_ex.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_fw.c</file>
-            <file>$PROJ_DIR$\..\..\Utilities\lpm\tiny_lpm\stm32_lpm.c</file>
-            <file>$PROJ_DIR$\..\..\Utilities\trace\adv_trace\stm32_adv_trace.c</file>
-            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_mem.c</file>
-            <file>$PROJ_DIR$\..\..\Utilities\sequencer\stm32_seq.c</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_adv_trace.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMac.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_flash.o</file>
-            <file>$PROJ_DIR$\..\App\app.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_tim_ex.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Utilities\utilities.c</file>
-            <file>$PROJ_DIR$\..\board.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio.c</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionCN470.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_tiny_vsnprintf.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCN470.h</file>
             <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-            <file>$PROJ_DIR$\..\..\Utilities\timer\stm32_timer.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCN470.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_flash.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\radio_driver.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_adc_ex.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_flash.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionCN470.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\RegionIN865.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_driver.c</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_uart_ex.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_msp.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\soft-se.c</file>
             <file>$PROJ_DIR$\sparrow\Obj\app.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\radio_fw.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_systime.c</file>
             <file>$PROJ_DIR$\sparrow\Obj\LoRaMacClassB.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionUS915.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\LmHandler.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMac.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacAdr.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacConfirmQueue.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_tim.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_tim_ex.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCrypto.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_uart_ex.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_uart.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacSerializer.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\cmac.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\lorawan_aes.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacParser.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionAU915.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionBaseUS.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCN779.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCommands.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCommon.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU868.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\Packages\LmhpCompliance.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_ll_adc.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\NvmDataMgmt.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionAS923.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionIN865.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionKR920.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionRU864.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU433.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\Region.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassB.c</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCN470.c</file>
-            <file>$PROJ_DIR$\..\App\lora_info.c</file>
-            <file>$PROJ_DIR$\..\Core\Radio\radio_board_if.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\stm32wlxx_hal_msp.c</file>
-            <file>$PROJ_DIR$\startup_stm32wl55xx_cm4.s</file>
-            <file>$PROJ_DIR$\..\Core\Src\stm32wlxx_it.c</file>
-            <file>$PROJ_DIR$\..\App\app.c</file>
-            <file>$PROJ_DIR$\..\App\led.c</file>
-            <file>$PROJ_DIR$\..\App\appinit.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\adc.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\adc_if.c</file>
-            <file>$PROJ_DIR$\..\App\bin.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\main.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\rtc.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\stm32_lpm_if.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\debug.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rtc.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_i2c.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_flash.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rtc_ex.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_spi.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_dma_ex.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rcc.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\system_stm32wlxx.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\subghz.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_flash_ex.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_spi_ex.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_subghz.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_pwr_ex.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_i2c_ex.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\sys_app.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\usart_if.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_adc.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\strl.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\timer_if.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_gpio.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_pwr.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rcc_ex.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rng.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_adc_ex.c</file>
-            <file>$PROJ_DIR$\..\Core\Src\util_if.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_cortex.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_dma.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_exti.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rng_ex.c</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_cryp.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\rtc.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionRU864.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\sys_app.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_i2c_ex.o</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\lorawan_aes.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_dmamux.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacMessageTypes.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionEU868.o</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassBNvm.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\appinit.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_pwr.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_adv_trace.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMac.__cstat.et</file>
+            <file>$PROJ_DIR$\..\App\app.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rtc_ex.h</file>
+            <file>$PROJ_DIR$\..\config.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_tim_ex.h</file>
+            <file>$PROJ_DIR$\..\board.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_lpm.o</file>
             <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_tim.__cstat.et</file>
+            <file>$PROJ_DIR$\..\lora_app_version.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\Packages\LmhpCompliance.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\RegionCommon.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\system_stm32wlxx.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_spi_ex.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_bus.h</file>
+            <file>$PROJ_DIR$\..\Core\Inc\stm32wlxx_hal_conf.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_ll_adc.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_tiny_sscanf.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\system_stm32wlxx.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_tim_ex.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_spi_ex.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\lora_info.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\app.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_ll_adc.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_uart_ex.o</file>
-            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-            <file>$PROJ_DIR$\..\lora_app_version.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rcc.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\Utilities\sequencer\stm32_seq.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_bus.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU868.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_tiny_sscanf.o</file>
-            <file>$PROJ_DIR$\..\Core\Inc\stm32wlxx_hal_conf.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_tiny_vsnprintf.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_lpm.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_ll_adc.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\radio_board_if.o</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_cryp.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\app.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_uart_ex.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rcc.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_tiny_vsnprintf.__cstat.et</file>
             <file>$PROJ_DIR$\..\Core\Inc\main.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\radio_driver.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\system_stm32wlxx.o</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_tim.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\rtc.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\lora_info.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_tim.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\subghz.o</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\Packages\LmhpCompliance.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\adc.o</file>
-            <file>$PROJ_DIR$\..\Core\Inc\utilities_conf.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionNvm.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-            <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
-            <file>$PROJ_DIR$\sparrow\Obj\NvmDataMgmt.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacConfirmQueue.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_fw.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_subghz.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LmHandler.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMac.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_uart.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacHeaderTypes.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_lpm.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_pwr_ex.__cstat.et</file>
-            <file>$PROJ_DIR$\..\lorawan_conf.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_spi_ex.o</file>
-            <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_exti.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rcc_ex.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LmHandler.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionKR920.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\inttypes.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCrypto.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacCommands.o</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU868.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\debug.o</file>
             <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\lorawan_version.h</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_dma.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_exti.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rcc_ex.o</file>
-            <file>$PROJ_DIR$\..\Core\Inc\stm32wlxx_it.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\adc_if.o</file>
-            <file>$PROJ_DIR$\..\..\Utilities\trace\adv_trace\stm32_adv_trace.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_gpio.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_uart_ex.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacTypes.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_tiny_vsnprintf.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal.o</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_pwr.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_i2c.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionKR920.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\NvmDataMgmt.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacHeaderTypes.h</file>
+            <file>$PROJ_DIR$\..\Core\Inc\utilities_conf.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_subghz.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_lpm.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_fw.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LmHandler.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_spi_ex.o</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rcc_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LmHandler.o</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionNvm.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacConfirmQueue.h</file>
+            <file>$PROJ_DIR$\..\lorawan_conf.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionKR920.o</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMac.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_pwr_ex.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\inttypes.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCrypto.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_uart.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\adc.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacCommands.o</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\soft-se.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCommands.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU433.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCommon.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionUS915.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_uart_ex.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\Packages\LmhpCompliance.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_tim_ex.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_ll_adc.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacConfirmQueue.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCrypto.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacSerializer.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\lorawan_aes.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\NvmDataMgmt.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\LmHandler.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMac.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionAU915.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionBaseUS.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCN779.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionIN865.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_uart.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassB.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionKR920.c</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_tim.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\cmac.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionAS923.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacAdr.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacParser.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\Region.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCN470.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU868.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionRU864.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionAU915.h</file>
+            <file>$PROJ_DIR$\..\..\Utilities\timer\stm32_timer.c</file>
+            <file>$PROJ_DIR$\..\..\Utilities\lpm\tiny_lpm\stm32_lpm.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_fw.c</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_driver.c</file>
+            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_mem.c</file>
+            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_tiny_sscanf.c</file>
+            <file>$PROJ_DIR$\..\Core\Inc\stm32_lpm_if.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_adc_ex.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\sparrow\Obj\strl.o</file>
+            <file>$PROJ_DIR$\..\..\Utilities\trace\adv_trace\stm32_adv_trace.c</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionEU433.o</file>
+            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_tiny_vsnprintf.c</file>
+            <file>$PROJ_DIR$\..\Core\Inc\timer_if.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\sensor.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\radio.h</file>
+            <file>$PROJ_DIR$\..\Core\Inc\rtc.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Include\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_systime.c</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacCrypto.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Utilities\utilities.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_dma_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_exti.h</file>
+            <file>$PROJ_DIR$\..\..\Utilities\sequencer\stm32_seq.c</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacCommands.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rtc.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_adc.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassB.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio.c</file>
             <file>$PROJ_DIR$\sparrow\Obj\RegionIN865.o</file>
             <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionAS923.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\util_if.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\strl.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\util_if.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionCN470.o</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacSerializer.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_gpio.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\radio_board_if.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\radio.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_timer.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_subghz.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionCN470.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_gpio.o</file>
             <file>$PROJ_DIR$\sparrow\Exe\sparrow.out</file>
             <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCommon.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32_systime.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_pwr.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_tim_ex.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_flash_ex.o</file>
+            <file>$PROJ_DIR$\..\Core\Inc\stm32wlxx_it.h</file>
             <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCN779.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionKR920.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\util_if.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\strl.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\radio.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_rcc.h</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_cryp_ex.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\LoRaMacParser.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionBaseUS.o</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_gpio.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_mem.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_adc.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionAU915.__cstat.et</file>
-            <file>$PROJ_DIR$\..\Core\Radio\radio_conf.h</file>
-            <file>$PROJ_DIR$\..\lora_app.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rcc.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\adc.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\NvmDataMgmt.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rtc.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\bin.o</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rng.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Device\ST\STM32WLxx\Include\system_stm32wlxx.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_dma_ex.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\secure-element.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_usart_ex.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LmhpCompliance.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionAS923.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_spi_ex.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_cortex.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_it.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_timer.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\adc_if.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\util_if.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_tiny_vsnprintf.o</file>
+            <file>$PROJ_DIR$\..\..\Utilities\trace\adv_trace\stm32_adv_trace.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_gpio.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal.o</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacSerializer.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\radio_board_if.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacTypes.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_uart_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_i2c.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\RegionUS915.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_dma.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rng_ex.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_adc.o</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_gpio.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rng.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LmhpCompliance.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Core\Radio\radio_conf.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionAU915.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_usart_ex.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_dma.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\timer_if.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\secure-element.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionBaseUS.o</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_spi_ex.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_mem.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_it.o</file>
             <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacAdr.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_cortex.o</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_dma_ex.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_gpio.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_pwr.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacAdr.o</file>
-            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_systime.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU433.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassBConfig.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rtc.o</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\secure-element-nvm.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_pwr_ex.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacConfirmQueue.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMac.o</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionBaseUS.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\Region.o</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\LmHandler.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_usart.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_dma.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\LowLevelIOInterface.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Include\core_cm4.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_uart.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCommands.h</file>
-            <file>$PROJ_DIR$\..\config_sys.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionAS923.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_flash_ex.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_cortex.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rng_ex.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_it.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacParser.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_gpio_ex.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_spi.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacClassB.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rng.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\led.o</file>
-            <file>$PROJ_DIR$\stm32wl55xx_flash_cm4.icf</file>
-            <file>$PROJ_DIR$\sparrow\Obj\RegionCommon.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_timer.o</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_spi.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_lpuart.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rtc_ex.__cstat.et</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacTest.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\NvmDataMgmt.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\adc.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rcc.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\..\lora_app.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rtc.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\bin.o</file>
+            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Device\ST\STM32WLxx\Include\system_stm32wlxx.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionAS923.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\radio_ex.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\Region.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_i2c.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\lorawan_aes.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rtc_ex.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\bin.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\soft-se.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rng_ex.__cstat.et</file>
             <file>$PROJ_DIR$\..\se-identity.h</file>
-            <file>$PROJ_DIR$\sparrow\Obj\LmhpCompliance.o</file>
+            <file>$PROJ_DIR$\stm32wl55xx_flash_cm4.icf</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_spi.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacTest.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\soft-se.o</file>
             <file>$PROJ_DIR$\..\Core\Inc\subghz.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionCommon.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LmhpCompliance.o</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_lpuart.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\lorawan_aes.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\RegionEU433.__cstat.et</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_systime.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_uart.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_adc_ex.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\rtc.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_flash_ex.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\radio_ex.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rng_ex.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_dma.h</file>
             <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\Region.h</file>
-            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_def.h</file>
             <file>$PROJ_DIR$\..\Core\Inc\systime.h</file>
             <file>$PROJ_DIR$\..\board_radio.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_i2c.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_systime.o</file>
             <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionIN865.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_uart.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_timer.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_msp.o</file>
             <file>$PROJ_DIR$\sparrow\Obj\utilities.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_subghz.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_adc.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\time.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$PROJ_DIR$\..\Commissioning.h</file>
-            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionRU864.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_def.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_pwr_ex.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCommands.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacConfirmQueue.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\Region.o</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\secure-element-nvm.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacAdr.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rtc.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_dma.o</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_cortex.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_gpio_ex.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\LmHandler.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\CMSIS\Include\core_cm4.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\RegionAS923.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_rng.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\led.o</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_flash_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_it.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacParser.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU433.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\LowLevelIOInterface.h</file>
+            <file>$PROJ_DIR$\..\config_sys.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_ll_spi.h</file>
+            <file>$PROJ_DIR$\..\..\Utilities\misc\stm32_systime.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMac.o</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_usart.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_uart.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\LoRaMacClassB.o</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassBConfig.h</file>
+            <file>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Inc\stm32wlxx_hal_rng_ex.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionBaseUS.h</file>
             <file>$PROJ_DIR$\sparrow\Obj\cmac.o</file>
-            <file>$PROJ_DIR$\sparrow\Obj\stm32_mem.__cstat.et</file>
             <file>$PROJ_DIR$\sparrow\Obj\RegionUS915.__cstat.et</file>
-            <file>$PROJ_DIR$\..\Sensor\sensor.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\time.h</file>
+            <file>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionRU864.h</file>
+            <file>$PROJ_DIR$\..\Commissioning.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_subghz.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
             <file>$PROJ_DIR$\..\Sensor\sensor.h</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32wlxx_hal_adc.__cstat.et</file>
+            <file>$PROJ_DIR$\sparrow\Obj\stm32_mem.__cstat.et</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 320 42</file>
+                    <file> 303 48</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Utilities\misc\stm32_tiny_sscanf.c</name>
+            <name>$PROJ_DIR$\..\Core\Src\strl.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 254</file>
+                    <file> 277</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 76</file>
+                    <file> 313</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 145 363 84 1 63 276 426 94 273 236 49 269 357 290 78</file>
+                    <file> 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_fw.c</name>
+            <name>$PROJ_DIR$\..\Core\Src\stm32wlxx_it.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 345</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 410</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 309</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_dma.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 401</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 339</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rtc_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 138</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 363</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rcc_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 208</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 221</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_i2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 384</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 80</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Sensor\sensor.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 129</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 282</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 431 167 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 322 212 133 125 173</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\system_stm32wlxx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 196</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 184</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 160 181 206 392 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 324</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 201</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_i2c_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 156</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 135</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_flash.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 146</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 143</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_cortex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 347</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 134</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_pwr_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 67</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 229</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\util_if.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 312</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 320</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 187 47 74 212 133 125 173 416 426 82 55 322</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_adc_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 376</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 275</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_flash_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 308</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 409</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\usart_if.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 130</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 83</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 322 212 133 125 173</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\sys_app.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -483,35 +787,130 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 113 363 84 1 63 276 23 90 44 80 49 339 426 34 18 242 267 92 99 236 94 273 14 413 274 103 334 330 51 71 376 45 108 343 124 255 295 416 46 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 261 379 140 418 89 299 19</file>
+                    <file> 141 398 116 289 105 210 430 93 46 414 58 123 194 96 114 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 171 383 187 47 281 74 212 133 125 173 416 426 82 55</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Utilities\lpm\tiny_lpm\stm32_lpm.c</name>
+            <name>$PROJ_DIR$\..\Core\Src\subghz.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 257</file>
+                    <file> 202</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 281</file>
+                    <file> 95</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 25 49 363 84 1 63 276 267 34 18 242 92 99 236 94 426 273</file>
+                    <file> 370 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Utilities\trace\adv_trace\stm32_adv_trace.c</name>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_gpio.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 134</file>
+                    <file> 302</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 350</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_pwr.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 164</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 102</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rng_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 331</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 379</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_dma_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 60</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 290</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rcc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 354</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 192</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rng.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 407</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -521,1036 +920,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 299 49 363 84 1 63 276 267 34 18 242 92 99 236 94 426 273 145</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Utilities\misc\stm32_mem.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 331</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 430</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 49 363 84 1 63 276 92 267 34 18 242 99 236 94 426 273</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Utilities\sequencer\stm32_seq.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 102</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 35</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 251 49 363 84 1 63 276 267 34 18 242 92 99 236 94 426 273</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Utilities\utilities.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 422</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 20</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 95 267 34 49 363 84 1 63 276 18 242 92 99 236 94 426 273</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 22</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 317</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 113 363 84 1 63 276 23 90 44 80 49 339 426 34 18 242 267 92 99 236 94 273 14 413 274 103 334 330 51 71 376 45 108 343 124 255 295 416 46 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 261 379 140 418 89 299 19</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Utilities\misc\stm32_tiny_vsnprintf.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 303</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 256</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 99 236 94 363 84 1 63 276 426 273</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Utilities\timer\stm32_timer.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 393</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 318</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 44 80 49 363 84 1 63 276 339 426 34 18 242 267 92 99 236 94 273</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_driver.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 262</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 148</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 334 330 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 124 255 295 416 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 261 80 94 273 379 140 418 92 267 99 236 89 299 19 103</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\soft-se.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 402</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 75</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 269 363 84 1 63 276 426 357 49 283 14 80 413 95 267 34 18 242 92 99 236 94 273 89 299 115 52 280 345 291 302 90 44 339 417 361 425 74 121 54 366 404 123</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Utilities\misc\stm32_systime.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 408</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 322</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 145 363 84 1 63 276 426 361 49 425 74</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionUS915.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 352</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 431</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 49 363 84 1 63 276 80 413 321 302 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 280 415 95 278 268 283 54 366 120 91 370</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\LmHandler.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 288</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 277</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 269 363 84 1 63 276 426 357 49 80 95 267 34 18 242 92 99 236 94 273 90 44 339 427 404 123 338 14 413 415 278 417 361 425 74 302 268 283 54 366 120 321 280 397 372 82 17 29 265 345 291 121 89 299 294 107</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMac.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 369</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 135</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 95 267 34 49 363 84 1 63 276 18 242 92 99 236 94 426 273 415 80 278 90 44 339 417 361 425 74 302 268 283 54 366 120 321 280 17 291 269 357 121 345 397 272 385 378 356 314 14 413 89 299</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacAdr.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 360</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 70</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 415 49 363 84 1 63 276 80 95 267 34 18 242 92 99 236 94 426 273 278 90 44 339 417 361 425 74 302 268 283 54 366 120 321 280 356</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacConfirmQueue.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 368</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 69</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 49 363 84 1 63 276 80 339 426 90 44 34 18 242 267 92 99 236 94 273 95 278 417 361 425 74 302 268 283 54 366 120 272</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_tim.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 36</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 237</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_tim_ex.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 323</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 241</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCrypto.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 28</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 9</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 80 269 363 84 1 63 276 426 357 49 95 267 34 18 242 92 99 236 94 273 345 291 302 90 44 339 417 361 425 74 121 280 54 366 283 385 314</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_uart_ex.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 247</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 301</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_uart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 409</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 279</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacSerializer.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 62</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 87</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 314 49 363 84 1 63 276 121 280 95 267 34 18 242 92 99 236 94 426 273</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\cmac.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 429</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 33</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 49 363 84 1 63 276 115 52 95 267 34 18 242 92 99 236 94 426 273</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\lorawan_aes.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 38</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 400</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 269 363 84 1 63 276 426 357 49 115</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacParser.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 58</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 328</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 385 49 363 84 1 63 276 121 280 95 267 34 18 242 92 99 236 94 426 273</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionAU915.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 65</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 333</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 49 363 84 1 63 276 80 413 321 302 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 280 415 95 278 268 283 54 366 120 15 370</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionBaseUS.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 329</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 100</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 302 49 363 84 1 63 276 80 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 415 95 278 268 283 54 366 120 321 280 370</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCN779.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 66</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 43</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 49 363 84 1 63 276 80 413 321 302 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 280 415 95 278 268 283 54 366 120 325</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCommands.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 292</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 0</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 339 363 84 1 63 276 426 95 267 34 49 18 242 92 99 236 94 273 378 302 80 90 44 417 361 425 74 272 278 268 283 54 366 120</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCommon.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 392</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 238</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 113 363 84 1 63 276 23 14 49 80 413 95 267 34 18 242 92 99 236 94 426 273 321 302 90 44 339 417 361 425 74 280 415 278 268 283 54 366 120 89 299</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU868.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 125</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 64</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 49 363 84 1 63 276 80 413 321 302 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 280 415 95 278 268 283 54 366 120 253</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\Packages\LmhpCompliance.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 405</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 347</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 269 363 84 1 63 276 426 357 49 80 95 267 34 18 242 92 99 236 94 273 90 44 339 278 417 361 425 74 302 268 283 54 366 120 397 415 321 280 29 82 265</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_ll_adc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 258</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 246</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\NvmDataMgmt.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 68</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 271</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 145 363 84 1 63 276 426 95 267 34 49 18 242 92 99 236 94 273 278 80 90 44 339 417 361 425 74 302 268 283 54 366 120 338</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionAS923.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 380</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 348</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 49 363 84 1 63 276 80 413 321 302 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 280 415 95 278 268 283 54 366 120 309</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionIN865.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 308</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 149</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 49 363 84 1 63 276 80 413 321 302 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 280 415 95 278 268 283 54 366 120 419</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionKR920.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 289</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 24</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 49 363 84 1 63 276 80 413 321 302 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 280 415 95 278 268 283 54 366 120 307</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionRU864.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 122</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 109</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 49 363 84 1 63 276 80 413 321 302 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 280 415 95 278 268 283 54 366 120 428</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU433.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 3</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 407</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 49 363 84 1 63 276 80 413 321 302 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 280 415 95 278 268 283 54 366 120 362</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\Region.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 371</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 398</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 278 49 363 84 1 63 276 80 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 302 268 283 54 95 366 120 309 415 321 280 15 144 325 362 253 419 91 428</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassB.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 388</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 157</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 113 363 84 1 63 276 23 95 267 34 49 18 242 92 99 236 94 426 273 345 291 269 357 80 302 90 44 339 417 361 425 74 121 280 54 366 283 278 268 120 17 364 272 14 413 415 321</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCN470.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 313</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 142</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 49 363 84 1 63 276 80 413 321 302 90 44 339 426 34 18 242 267 92 99 236 94 273 417 361 425 74 280 415 95 278 268 283 54 366 120 144 370</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\App\lora_info.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 106</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 244</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 278 90 44 267 92 99 236 417 361 425 74 302 268 283 54 95 366 120 107 77</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Radio\radio_board_if.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 260</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 316</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 140 379 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 418 334 330 261 80 94 273 92 267 99 236 89 299 19</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\stm32wlxx_hal_msp.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 421</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 152</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\startup_stm32wl55xx_cm4.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 26</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\stm32wlxx_it.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 351</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 384</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 297</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\App\app.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 245</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 154</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 415 95 267 92 99 236 278 90 44 417 361 425 74 302 268 283 54 366 120 321 280 77 335 123 251 19 249 294 97 107 372 82 17 25 137 299 21 83 433</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\App\led.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 390</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 60</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 137 299 267 92 99 236</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\App\appinit.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 41</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 116</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 137 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 299 267 92 99 236 415 95 278 90 44 417 361 425 74 302 268 283 54 366 120 321 280 77 251</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\adc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 266</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 337</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 83 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\adc_if.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 298</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 30</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 21 83 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 77</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\App\bin.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 341</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 401</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 137 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 299 267 92 99 236</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\main.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 98</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 420</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 395</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\rtc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 235</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 411</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 8 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\stm32_lpm_if.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 96</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 110</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 25 6</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\debug.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 293</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 86</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 145 363 84 1 63 276 426 261 80 49 94 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 375</file>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
                 </tool>
             </inputs>
         </file>
@@ -1559,74 +929,36 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 365</file>
+                    <file> 400</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 340</file>
+                    <file> 357</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_i2c.c</name>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_exti.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 399</file>
+                    <file> 51</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 53</file>
+                    <file> 207</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_flash.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 136</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 147</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rtc_ex.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 111</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 396</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
                 </tool>
             </inputs>
         </file>
@@ -1635,131 +967,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 40</file>
+                    <file> 70</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 31</file>
+                    <file> 65</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_dma_ex.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 27</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 4</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rcc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 336</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 250</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\system_stm32wlxx.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 239</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 240</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 124 255 295 416 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\subghz.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 264</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 56</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 406 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_flash_ex.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 324</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 381</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 304</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 259</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
                 </tool>
             </inputs>
         </file>
@@ -1768,112 +986,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 284</file>
+                    <file> 219</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 243</file>
+                    <file> 178</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_subghz.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 423</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 275</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_pwr_ex.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 37</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 282</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_i2c_ex.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 114</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 104</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\sys_app.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 55</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 118</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 145 363 84 1 63 276 426 77 49 379 21 83 261 80 94 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 140 418 251 25 5 44 267 92 99 236 361 425 74 19</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\Core\Src\usart_if.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 101</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 79</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 299 267 92 99 236</file>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
                 </tool>
             </inputs>
         </file>
@@ -1886,32 +1009,32 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 424</file>
+                    <file> 432</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Core\Src\strl.c</name>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_subghz.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 13</file>
+                    <file> 429</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 311</file>
+                    <file> 213</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418</file>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
                 </tool>
             </inputs>
         </file>
@@ -1920,159 +1043,159 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 112</file>
+                    <file> 140</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 355</file>
+                    <file> 340</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 113 363 84 1 63 276 23 5 44 80 49 339 426 34 18 242 267 92 99 236 94 273 361 425 74 261 51 71 376 45 108 343 124 255 295 416 46 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 8 25 19 47</file>
+                    <file> 109 398 116 289 105 210 49 281 74 96 46 355 430 54 285 176 212 133 125 173 114 215 416 426 82 194 100 107 405 75 127 359 160 181 206 392 76 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 284 47 55 50</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_gpio.c</name>
+            <name>$PROJ_DIR$\..\App\app.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 315</file>
+                    <file> 190</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 358</file>
+                    <file> 151</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 381 115 212 133 125 173 228 126 74 382 416 426 82 327 223 226 86 397 162 304 211 93 356 169 187 55 174 205 110 136 404 112 296 47 167 322 58 123 431</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_pwr.c</name>
+            <name>$PROJ_DIR$\..\App\appinit.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 126</file>
+                    <file> 71</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 67</file>
+                    <file> 163</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 167 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 322 212 133 125 173 381 115 228 126 74 382 416 426 82 327 223 226 86 397 162 304 211 93 187</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rcc_ex.c</name>
+            <name>$PROJ_DIR$\..\App\led.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 296</file>
+                    <file> 408</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 287</file>
+                    <file> 97</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 167 322 212 133 125 173</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rng.c</name>
+            <name>$PROJ_DIR$\..\Core\Src\main.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 389</file>
+                    <file> 117</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 39</file>
+                    <file> 387</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 373</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_adc_ex.c</name>
+            <name>$PROJ_DIR$\..\Core\Src\adc_if.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 410</file>
+                    <file> 319</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 7</file>
+                    <file> 64</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 58 123 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 93</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Core\Src\util_if.c</name>
+            <name>$PROJ_DIR$\..\Core\Src\rtc.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 310</file>
+                    <file> 198</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 312</file>
+                    <file> 377</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 251 25 44 267 92 99 236 361 425 74 19 299</file>
+                    <file> 284 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_cortex.c</name>
+            <name>$PROJ_DIR$\..\Core\Radio\radio_board_if.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 350</file>
+                    <file> 188</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 93</file>
+                    <file> 326</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 171 414 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 383 336 333 194 96 114 215 133 212 125 173 119 322 55</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_dma.c</name>
+            <name>$PROJ_DIR$\..\Core\Src\adc.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 374</file>
+                    <file> 233</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -2082,69 +1205,414 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 123 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_exti.c</name>
+            <name>$PROJ_DIR$\..\App\lora_info.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 50</file>
+                    <file> 124</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 286</file>
+                    <file> 199</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 228 126 74 212 133 125 173 382 416 426 82 327 223 226 86 115 397 162 136 93</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_rng_ex.c</name>
+            <name>$PROJ_DIR$\..\Core\Src\debug.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 354</file>
+                    <file> 204</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 403</file>
+                    <file> 118</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 124 255 295 416 51 71 376 49 363 84 1 63 276 45 34 18 242 108 343 46 339 426 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61</file>
+                    <file> 141 398 116 289 105 210 430 194 96 46 114 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 413</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\sparrow\Exe\sparrow.out</name>
+            <name>$PROJ_DIR$\startup_stm32wl55xx_cm4.s</name>
             <outputs>
                 <tool>
-                    <name>ILINK</name>
-                    <file> 42</file>
+                    <name>AARM</name>
+                    <file> 62</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Core\Src\stm32_lpm_if.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 121</file>
                 </tool>
                 <tool>
-                    <name>OBJCOPY</name>
-                    <file> 59</file>
+                    <name>__cstat</name>
+                    <file> 137</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>ILINK</name>
-                    <file> 391 266 298 245 41 341 429 293 390 288 405 106 369 360 388 292 368 28 58 62 38 98 68 22 260 262 81 371 380 65 329 313 66 392 3 125 308 289 122 352 235 85 402 26 134 257 96 331 102 408 393 254 303 304 332 410 350 374 27 50 136 324 315 399 114 421 126 37 336 296 389 354 365 111 40 284 423 36 323 409 247 351 258 13 264 55 239 112 101 310 422 11 248 285 270</file>
+                    <name>ICCARM</name>
+                    <file> 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 47 274</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Sensor\sensor.c</name>
+            <name>$PROJ_DIR$\..\Core\Src\stm32wlxx_hal_msp.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 390</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 150</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\App\bin.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 358</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 364</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 167 194 96 46 398 116 289 105 210 114 430 215 100 107 405 75 54 285 176 127 359 160 181 206 392 76 355 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 414 171 383 322 212 133 125 173</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\soft-se.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 369</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 91</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 218 398 116 289 105 210 430 348 46 226 283 96 361 115 212 54 285 176 133 125 173 114 215 119 322 157 101 211 341 231 327 126 74 355 382 416 426 82 159 86 397 365 169</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCommands.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 234</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 293</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 355 398 116 289 105 210 430 115 212 54 46 285 176 133 125 173 114 215 394 327 96 126 74 382 416 426 82 225 228 223 226 86 397 162</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU433.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 279</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 375</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 283 46 398 116 289 105 210 96 361 304 327 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 211 381 115 228 223 226 86 397 162 412</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCommon.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 371</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 177</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 109 398 116 289 105 210 49 283 46 96 361 115 212 54 285 176 133 125 173 114 430 215 304 327 126 74 355 382 416 426 82 211 381 228 223 226 86 397 162 119 322</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionUS915.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 330</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 425</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 283 46 398 116 289 105 210 96 361 304 327 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 211 381 115 228 223 226 86 397 162 113 423</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_uart_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 191</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 328</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\Packages\LmhpCompliance.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 372</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 335</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 218 398 116 289 105 210 430 348 46 96 115 212 54 285 176 133 125 173 114 215 126 74 355 228 382 416 426 82 327 223 226 86 397 162 368 381 304 211 63 112 175</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_tim_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 307</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 185</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_ll_adc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 182</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 186</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacConfirmQueue.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 395</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 106</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 46 398 116 289 105 210 96 355 430 126 74 54 285 176 212 133 125 173 114 215 115 228 382 416 426 82 327 223 226 86 397 162 225</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacCrypto.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 61</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 287</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 96 218 398 116 289 105 210 430 348 46 115 212 54 285 176 133 125 173 114 215 341 231 327 126 74 355 382 416 426 82 159 211 86 397 226 411 325</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacSerializer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 92</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 120</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 325 46 398 116 289 105 210 159 211 115 212 54 285 176 133 125 173 114 430 215</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\lorawan_aes.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 68</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 374</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 218 398 116 289 105 210 430 348 46 157</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\NvmDataMgmt.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 87</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 209</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 141 398 116 289 105 210 430 115 212 54 46 285 176 133 125 173 114 215 228 96 126 74 355 382 416 426 82 327 223 226 86 397 162 352</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\LmHandler.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 222</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 217</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 218 398 116 289 105 210 430 348 46 96 115 212 54 285 176 133 125 173 114 215 126 74 355 428 365 169 352 283 361 381 228 382 416 426 82 327 223 226 86 397 162 304 211 368 404 112 296 63 175 341 231 159 119 322 205 136</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMac.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 417</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 166</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 115 212 54 46 398 116 289 105 210 285 176 133 125 173 114 430 215 381 96 228 126 74 355 382 416 426 82 327 223 226 86 397 162 304 211 296 231 218 348 159 341 368 225 411 394 346 325 283 361 119 322</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionAU915.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -2152,13 +1620,545 @@
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 12</file>
+                    <file> 337</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 433 137 261 80 49 363 84 1 63 276 94 426 273 51 71 376 45 34 18 242 108 343 124 255 295 416 46 339 414 117 344 2 88 119 382 234 327 10 48 412 300 386 306 32 305 359 367 57 326 252 105 73 342 383 16 128 394 349 319 387 263 138 377 151 373 346 61 379 140 418 299 267 92 99 236</file>
+                    <file> 283 46 398 116 289 105 210 96 361 304 327 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 211 381 115 228 223 226 86 397 162 267 423</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionBaseUS.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 342</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 122</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 327 46 398 116 289 105 210 96 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 381 115 228 223 226 86 397 162 304 211 423</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCN779.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 103</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 73</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 283 46 398 116 289 105 210 96 361 304 327 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 211 381 115 228 223 226 86 397 162 310</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionIN865.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 298</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 148</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 283 46 398 116 289 105 210 96 361 304 327 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 211 381 115 228 223 226 86 397 162 386</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 388</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 232</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacClassB.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 420</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 153</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 109 398 116 289 105 210 49 115 212 54 46 285 176 133 125 173 114 430 215 341 231 218 348 96 327 126 74 355 382 416 426 82 159 211 86 397 226 228 223 162 296 421 225 283 361 381 304</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionKR920.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 227</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 59</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 283 46 398 116 289 105 210 96 361 304 327 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 211 381 115 228 223 226 86 397 162 311</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Drivers\STM32WLxx_HAL_Driver\Src\stm32wlxx_hal_tim.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 66</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 200</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 181 206 392 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Crypto\cmac.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 424</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 53</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 46 398 116 289 105 210 157 101 115 212 54 285 176 133 125 173 114 430 215</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionAS923.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 406</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 360</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 283 46 398 116 289 105 210 96 361 304 327 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 211 381 115 228 223 226 86 397 162 299</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacAdr.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 399</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 104</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 381 46 398 116 289 105 210 96 115 212 54 285 176 133 125 173 114 430 215 228 126 74 355 382 416 426 82 327 223 226 86 397 162 304 211 346</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacParser.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 90</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 317</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 411 46 398 116 289 105 210 159 211 115 212 54 285 176 133 125 173 114 430 215</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\Region.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 396</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 362</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 228 46 398 116 289 105 210 96 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 327 223 226 86 115 397 162 299 381 304 211 267 142 310 412 203 386 113 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionCN470.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 301</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 147</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 283 46 398 116 289 105 210 96 361 304 327 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 211 381 115 228 223 226 86 397 162 142 423</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionEU868.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 161</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 79</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 283 46 398 116 289 105 210 96 361 304 327 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 211 381 115 228 223 226 86 397 162 203</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\Region\RegionRU864.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 154</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 128</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 283 46 398 116 289 105 210 96 361 304 327 126 74 355 430 54 285 176 212 133 125 173 114 215 382 416 426 82 211 381 115 228 223 226 86 397 162 427</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Utilities\timer\stm32_timer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 389</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 318</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 74 96 46 398 116 289 105 210 355 430 54 285 176 212 133 125 173 114 215</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Utilities\lpm\tiny_lpm\stm32_lpm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 172</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 214</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 47 46 398 116 289 105 210 212 54 285 176 133 125 173 114 430 215</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_fw.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 99</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 152</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 109 398 116 289 105 210 49 126 74 96 46 355 430 54 285 176 212 133 125 173 114 215 283 361 216 111 336 333 100 107 405 75 127 359 160 181 206 392 76 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 194 414 171 383 119 322 55</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio_driver.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 195</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 144</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 336 333 100 107 405 46 398 116 289 105 210 75 54 285 176 127 359 160 181 206 392 76 355 430 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 194 96 114 215 414 171 383 133 212 125 173 119 322 55 111</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Utilities\misc\stm32_mem.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 344</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 433</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 46 398 116 289 105 210 133 212 54 285 176 125 173 114 430 215</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Utilities\misc\stm32_tiny_sscanf.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 183</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 88</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 141 398 116 289 105 210 430 114 215 173 46 218 348 230 94</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Utilities\trace\adv_trace\stm32_adv_trace.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 165</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 108</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 322 46 398 116 289 105 210 212 54 285 176 133 125 173 114 430 215 141</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Utilities\misc\stm32_tiny_vsnprintf.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 321</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 193</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 125 173 114 398 116 289 105 210 430 215</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Utilities\misc\stm32_systime.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 385</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 305</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 141 398 116 289 105 210 430 416 46 426 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Utilities\utilities.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 391</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 57</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 115 212 54 46 398 116 289 105 210 285 176 133 125 173 114 430 215</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Utilities\sequencer\stm32_seq.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 131</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 56</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 187 46 398 116 289 105 210 212 54 285 176 133 125 173 114 430 215</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\SubGHz_Phy\stm32_radio_driver\radio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 52</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 314</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 109 398 116 289 105 210 49 126 74 96 46 355 430 54 285 176 212 133 125 173 114 215 283 361 216 111 336 333 100 107 405 75 127 359 160 181 206 392 76 380 158 349 295 132 145 402 189 316 291 77 378 323 403 329 69 306 351 393 84 315 180 139 78 334 422 294 168 367 343 300 415 197 170 419 149 418 338 98 194 414 171 383 119 322 55</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\sparrow\Exe\sparrow.out</name>
+            <outputs>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 89</file>
+                </tool>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 48</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 366 233 319 190 71 358 424 204 408 222 372 124 417 399 420 234 395 61 90 92 68 117 87 52 188 195 99 396 406 85 342 301 103 371 279 161 298 227 154 330 198 129 369 62 165 172 121 344 131 385 389 183 321 324 332 376 347 401 60 51 146 308 302 384 156 390 164 67 354 208 407 331 400 138 70 219 429 66 307 388 191 345 182 277 202 81 196 140 130 312 391 276 179 220 224</file>
                 </tool>
             </inputs>
         </file>
