@@ -1,5 +1,0 @@
-led.c:9:6:ledJoined	8	static
-led.c:21:6:ledIndicateJoinInProgress	8	static
-led.c:27:6:ledToggleJoin	8	static
-led.c:34:6:ledIndicateReceiveInProgress	8	static
-led.c:40:6:ledIndicateTransmitInProgress	8	static

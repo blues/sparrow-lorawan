@@ -1,8 +1,0 @@
-sys_app.c:15:6:SystemApp_Init	8	static
-sys_app.c:22:9:GetBatteryLevel	8	static
-sys_app.c:38:10:GetTemperatureLevel	8	static
-sys_app.c:46:6:GetUniqueId	16	static
-sys_app.c:76:10:GetDevAddr	8	static
-sys_app.c:87:19:HAL_InitTick	0	static
-sys_app.c:92:10:HAL_GetTick	8	static
-sys_app.c:97:6:HAL_Delay	16	static
