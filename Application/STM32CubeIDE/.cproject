@@ -64,6 +64,8 @@
                                     <listOptionValue builtIn="false" value="../../Application/Core/Inc"/>
                                     									
                                     <listOptionValue builtIn="false" value="../../Core/Radio"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="../../Sensor"/>
                                     								
                                 </option>
                                 								
@@ -94,6 +96,8 @@
                                     <listOptionValue builtIn="false" value="../../"/>
                                     									
                                     <listOptionValue builtIn="false" value="../../App"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="../../Sensor"/>
                                     									
                                     <listOptionValue builtIn="false" value="../../Core/Inc"/>
                                     									
@@ -246,6 +250,8 @@
                                     <listOptionValue builtIn="false" value="../../Application/Core/Inc"/>
                                     									
                                     <listOptionValue builtIn="false" value="../../Core/Radio"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="../../Sensor"/>
                                     								
                                 </option>
                                 								
@@ -314,6 +320,8 @@
                                     <listOptionValue builtIn="false" value="../../Drivers/BSP/STM32WLxx_Nucleo"/>
                                     									
                                     <listOptionValue builtIn="false" value="../../Core/Radio"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="../../Sensor"/>
                                     								
                                 </option>
                                 								
@@ -403,7 +411,21 @@
         	
     </storageModule>
     	
-    <storageModule moduleId="refreshScope"/>
+    <storageModule moduleId="refreshScope" versionNumber="2">
+        		
+        <configuration configurationName="Debug">
+            			
+            <resource resourceType="PROJECT" workspacePath="/sparrow"/>
+            		
+        </configuration>
+        		
+        <configuration configurationName="Release">
+            			
+            <resource resourceType="PROJECT" workspacePath="/sparrow"/>
+            		
+        </configuration>
+        	
+    </storageModule>
     	
     <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
     

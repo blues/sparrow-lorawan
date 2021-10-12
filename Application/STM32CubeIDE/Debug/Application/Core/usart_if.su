@@ -1,0 +1,5 @@
+usart_if.c:59:25:vcom_DeInit	8	static
+usart_if.c:51:25:vcom_Init	8	static
+usart_if.c:72:25:vcom_Trace_DMA	8	static
+usart_if.c:79:25:vcom_ReceiveInit	8	static
+usart_if.c:66:6:vcom_Trace	8	static

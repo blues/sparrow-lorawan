@@ -108,11 +108,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/App/lora_info.c</locationURI>
 		</link>
 		<link>
-			<name>Application/App/sensor.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/App/sensor.c</locationURI>
-		</link>
-		<link>
 			<name>Application/Core/adc.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/adc.c</locationURI>
@@ -186,6 +181,11 @@
 			<name>Application/Core/util_if.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/util_if.c</locationURI>
+		</link>
+		<link>
+			<name>Application/Sensor/sensor.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Sensor/sensor.c</locationURI>
 		</link>
 		<link>
 			<name>Drivers/CMSIS/system_stm32wlxx.c</name>

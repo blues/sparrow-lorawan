@@ -18,6 +18,7 @@
 #include "config_sys.h"
 #include "app.h"
 #include "adc_if.h"
+#include "sensor.h"
 
 // Sensor timers
 static uint32_t sensorSecsSuccess = 10;

@@ -1452,15 +1452,6 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\App\lora_info.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\App\sensor.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
             </group>
             <group>
@@ -1469,28 +1460,16 @@
                     <name>Radio</name>
                     <file>
                         <name>$PROJ_DIR$\..\Core\Radio\radio_board_if.c</name>
-                        <configuration>
-                            <name>sparrow</name>
-                        </configuration>
                     </file>
                 </group>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\adc.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\adc_if.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\debug.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\main.c</name>
@@ -1500,66 +1479,45 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\rtc.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32_lpm_if.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32wlxx_hal_msp.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32wlxx_it.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\strl.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\subghz.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\sys_app.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\timer_if.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\usart_if.c</name>
-                    <configuration>
-                        <name>sparrow</name>
-                    </configuration>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\util_if.c</name>
                 </file>
             </group>
+            <group>
+                <name>Sensor</name>
+                <file>
+                    <name>$PROJ_DIR$\..\Sensor\sensor.c</name>
+                    <configuration>
+                        <name>sparrow</name>
+                    </configuration>
+                </file>
+            </group>
         </group>
-    </group>
-    <group>
-        <name>Doc</name>
-        <file>
-            <name>$PROJ_DIR$\..\..\readme.txt</name>
-        </file>
     </group>
     <group>
         <name>Drivers</name>
@@ -1666,18 +1624,12 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\LmHandler.c</name>
-                <configuration>
-                    <name>sparrow</name>
-                </configuration>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\LmHandler\Packages\LmhpCompliance.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMac.c</name>
-                <configuration>
-                    <name>sparrow</name>
-                </configuration>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\Middlewares\Third_Party\LoRaWAN\Mac\LoRaMacAdr.c</name>
@@ -1769,9 +1721,6 @@
         <name>Utilities</name>
         <file>
             <name>$PROJ_DIR$\..\..\Utilities\trace\adv_trace\stm32_adv_trace.c</name>
-            <configuration>
-                <name>sparrow</name>
-            </configuration>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\Utilities\lpm\tiny_lpm\stm32_lpm.c</name>

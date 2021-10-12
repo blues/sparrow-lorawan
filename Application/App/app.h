@@ -7,16 +7,6 @@
 #include "main.h"
 #include "config_sys.h"
 
-// sensor.c
-bool sensorGetData(uint8_t *buf, uint8_t bufmaxlen, uint8_t *buflen, uint32_t *secsSuccess, uint32_t *secsFailure);
-
-// led.c
-void ledJoined(void);
-void ledIndicateJoinInProgress(bool on);
-void ledToggleJoin(void);
-void ledIndicateReceiveInProgress(bool on);
-void ledIndicateTransmitInProgress(bool on);
-
 // bin.c
 void binBegin(uint8_t *buf, uint8_t len, uint8_t flagbytes);
 uint8_t binEnd(void);
@@ -32,6 +22,13 @@ void binAppendBytes(uint8_t *data, uint32_t datalen, uint32_t templateLen);
 void binAppendReal16(float number);
 void binAppendReal32(float number);
 void binAppendReal64(double number);
+
+// led.c
+void ledJoined(void);
+void ledIndicateJoinInProgress(bool on);
+void ledToggleJoin(void);
+void ledIndicateReceiveInProgress(bool on);
+void ledIndicateTransmitInProgress(bool on);
 
 // App logging macros
 #include "stm32_adv_trace.h"
