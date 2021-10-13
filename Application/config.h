@@ -4,6 +4,9 @@
 
 #pragma once
 
+// Version of the LoRaWAN MAC firmware (used when adding a device manually to TTN)
+#define CONFIG_LORAWAN_VERSION  "MAC V1.0.3"
+
 // From LoRaWAN Network Management Console
 #define CONFIG_DEVEUI           { 0x60, 0x81, 0xF9, 0x4B, 0x02, 0x96, 0x4E, 0x2A }
 #define CONFIG_APPEUI           { 0x60, 0x81, 0xF9, 0x5C, 0x7B, 0x60, 0xB0, 0x93  }

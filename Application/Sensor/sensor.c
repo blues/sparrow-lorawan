@@ -23,16 +23,14 @@ bool sensorGetData(uint8_t *buf, uint8_t bufmaxlen, uint8_t *buflen, uint32_t *s
 	//   X-Session-Token: <your project's notehub API session token>
 	//   X-Format: ttn <or helium>
 	//   X-Product: <any product UID within your project>
-	//   X-Template: {"a":11,"b":12,"c":13,"d":14,"temp":12.1,"lat":14.1,"lon":14.1}
+	//   X-Template: {"a":11,"b":12,"c":13"temp":12.1}
     //
     binBegin(buf, bufmaxlen, 0);
-    binAppendInt8(0);               // "a"
-    binAppendInt16(1);              // "b"
-    binAppendInt24(2);              // "c"
-    binAppendInt32(3);              // "d"
+    binAppendInt8(1);               // "a"
+    binAppendInt16(2);              // "b"
+    static int messagesSent = 0;
+    binAppendInt24(messagesSent++); // "c"
     binAppendReal16(-1.23);         // "temp"
-    binAppendReal32(4.56);          // "lat"
-    binAppendReal32(7.89);          // "lon"
     *buflen = binEnd();
 
     // Done
