@@ -25,7 +25,6 @@ extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 extern RTC_HandleTypeDef hrtc;
 extern SUBGHZ_HandleTypeDef hsubghz;
-extern DMA_HandleTypeDef hdma_usart2_tx;
 
 // Forwards
 void EXTI0_IRQHandler(void);

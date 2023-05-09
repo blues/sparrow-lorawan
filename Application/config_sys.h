@@ -11,8 +11,9 @@
 #define DEBUGGER_ON                                     true
 
 // Enable tracing
+#define DEBUGGER_ON_USART1                              true
 #define DEBUGGER_ON_USART2                              false
-#define DEBUGGER_ON_LPUART1                             true
+#define DEBUGGER_ON_LPUART1                             false
 
 // Special GPIO trace methods when working on radio code
 #define DEBUGGER_RADIO_DBG_GPIO                         false

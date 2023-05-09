@@ -517,6 +517,30 @@ void MX_USART2_UART_Init(void)
 
 }
 
+// USART1 suspend function
+void MX_USART1_UART_Suspend(void)
+{
+
+    // Enable wakeup interrupt from STOP2 (RM0453 Tbl 93)
+    // Note that this is the moral equivalent of doing
+    // LL_LPUART_EnableIT_WKUP(USART1), however it works
+    // on the dual-core processor to say "enable wakeup
+    // on either core - whichever is available".
+    LL_EXTI_EnableIT_0_31(LL_EXTI_LINE_27);
+
+}
+
+// USART1 resume function
+void MX_USART1_UART_Resume(void)
+{
+    if (HAL_UART_Init(&huart1) != HAL_OK) {
+        Error_Handler();
+    }
+    if (HAL_DMA_Init(&hdma_usart1_tx) != HAL_OK) {
+        Error_Handler();
+    }
+}
+
 // USART2 suspend function
 void MX_USART2_UART_Suspend(void)
 {

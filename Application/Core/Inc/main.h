@@ -36,6 +36,8 @@ uint8_t MX_DBG_Receive(bool *underrun, bool *overrun);
 void MX_USART1_UART_Init(void);
 void MX_USART1_UART_Transmit(uint8_t *buf, uint32_t len, uint32_t timeoutMs);
 void MX_USART1_UART_DeInit(void);
+void MX_USART1_UART_Suspend(void);
+void MX_USART1_UART_Resume(void);
 void MX_USART2_UART_Init(void);
 void MX_USART2_UART_Suspend(void);
 void MX_USART2_UART_Resume(void);
@@ -62,7 +64,9 @@ void Error_Handler(void);
 size_t strlcpy(char *dst, const char *src, size_t siz);
 size_t strlcat(char *dst, const char *src, size_t siz);
 
+extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 extern UART_HandleTypeDef hlpuart1;
+extern DMA_HandleTypeDef hdma_usart1_tx;
 extern DMA_HandleTypeDef hdma_usart2_tx;
 
